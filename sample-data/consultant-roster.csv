@@ -1,0 +1,9 @@
+name,role,skills,availability_next_month_pct,current_project
+Elena Marsh,Senior Analytics Engineer,Power BI; SQL; dbt; Snowflake; data modeling; logistics reporting,0,Harlow Foods data platform
+Marcus Bell,Analytics Engineer,Power BI; SQL; Excel,100,None
+Hana Sato,Senior Data Engineer,Python; SQL; Airflow; Snowflake; Azure,40,Brightwell Health migration
+Diego Ramos,Data Engineer,Python; SQL; Azure Data Factory; dbt,60,Brightwell Health migration
+Aisha Karim,Engagement Manager,Project delivery; stakeholder management; change management,50,Harlow Foods data platform
+Owen Fitch,Data Scientist,Python; forecasting; machine learning,100,None
+Lucia Ferrante,AI Engineer,Python; RAG; prompt engineering; Azure,20,Tidewater Insurance claims assistant
+Ben Adeyemi,Junior Data Analyst,SQL; Excel; Tableau,80,Tidewater Insurance reporting
