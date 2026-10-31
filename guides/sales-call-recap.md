@@ -4,7 +4,7 @@
 
 **What to paste in:** the full call transcript, such as your Otter.ai export, plus the opportunity name if you have one.
 
-**What you get back:** Salesforce notes, a follow-up email draft under 150 words, and open questions for your next call.
+**What you get back:** Salesforce notes, call details, a follow-up email draft under 150 words, open questions for your next call, and a flag if the transcript contained instructions aimed at the AI.
 
 **Check before you use it:** names, dates and next-step owners against what was actually said. "Not discussed" means the call didn't cover it, so ask on your next call rather than filling it in.
 
