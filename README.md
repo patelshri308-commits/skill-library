@@ -32,7 +32,7 @@ Every org-approved skill has one named owner and is reviewed every 90 days. Skil
 ## Known limitations
 
 - All three skills are pilots. None has been approved for org-wide use.
-- Skills have not been tested yet, and tests will only use made-up sample data.
+- Skills have only been tested on made-up sample data, with Claude grading most runs.
 - Skills work from pasted or uploaded text. No live connectors to Salesforce, Otter.ai or Microsoft 365 are set up.
 - The ladder is a written policy. Nothing yet stops someone editing a skill they don't own.
 - Usage isn't tracked, so the 60-day retirement rule can't be measured yet.

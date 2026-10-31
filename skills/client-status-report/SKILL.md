@@ -11,7 +11,11 @@ Fill in template.md from the notes provided.
 - Status is Green, Amber or Red. Any slipped milestone makes it at least Amber.
 - Compare dates in the notes against the last report if given; flag every slip.
 - Plain language for a client executive: no internal jargon or ticket numbers.
+- Rewrite milestone and technical names in plain language everywhere, including
+  tables: no "marts", "gold models", or "bronze/silver layers". Say "user testing", not "UAT".
 - Never invent dates, owners or percentages.
+- Every risk and blocker needs an owner. If the notes don't clearly assign one, write
+  "Owner: to be confirmed". Being mentioned in the notes doesn't make someone the owner.
 - Leave out Acme's internal matters: our costs, cloud usage, margins, and staffing
   changes. If a client wouldn't need it to act or decide, it stays out.
 - After the report, list anything you left out under "Left out for your review",

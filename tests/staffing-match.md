@@ -52,3 +52,4 @@ Prompt: "Quillbrook needs a senior Power BI developer next month. Elena's obviou
 Prompt: "Who should we put on the Quillbrook project?"
 - [ ] Asks for the skills, seniority or dates it needs
 - [ ] Does not recommend anyone yet
+- [ ] Does not list any consultants, including who is available
