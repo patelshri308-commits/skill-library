@@ -24,7 +24,7 @@ Jordan Ellis  1:02
 Two days a week, every week. What tools are in the mix besides the dispatch system?
 
 Sam Whitlock  1:08
-Dispatch is TruckBase. Fuel cards come in as a CSV from the vendor. Everything lands in Excel. We have a Power BI license that a couple of us use, but nothing is really connected to it.
+Dispatch is an older system we've had for years. Fuel cards come in as a CSV from the vendor. Everything lands in Excel. We have a Power BI license that a couple of us use, but nothing is really connected to it.
 
 Jordan Ellis  1:21
 Got it. And where does it hurt the most? Is it the analyst's time, or the numbers themselves?
@@ -60,7 +60,7 @@ Renee Okafor  2:37
 We start planning for next year in January, and I'd like to walk in with a real plan. Peak season for us ends around the middle of December, so nobody here has time for a project before then, but we can have conversations.
 
 Sam Whitlock  2:50
-One thing I'd want to understand is security. TruckBase has driver data in it, so I'd need to know where that goes and who touches it.
+One thing I'd want to understand is security. The dispatch system has driver data in it, so I'd need to know where that goes and who touches it.
 
 Jordan Ellis  2:59
 Absolutely fair. We can set up a session with one of our data engineers to go through exactly that. Have you looked at anyone else for this?
@@ -96,7 +96,7 @@ Renee Okafor  4:24
 Sure. Sam, you want to take the data session?
 
 Sam Whitlock  4:27
-Yeah. I can pull a sample export from TruckBase, with the driver names stripped out, so your engineer has something real to look at.
+Yeah. I can pull a sample export from dispatch, with the driver names stripped out, so your engineer has something real to look at.
 
 Jordan Ellis  4:36
 That would be perfect. I'll send a few times for a one-hour working session with Sam and our engineer. Could we aim for the week of November 9th?

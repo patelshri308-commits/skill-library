@@ -1,6 +1,22 @@
 # Skill library for Acme Data Co.
 
-Acme Data Co. is a fictional company. All sample data in this repo is made up.
+A small governed library of Claude skills for a fictional 40-person consultancy: three tested skills, plus the rules, registry and test history a company needs to trust them. Acme and all sample data here are made up.
+
+## What's inside
+
+- `skills/`: three skills, one each for Sell, Staff and Deliver
+- `REGISTRY.md`: every skill with its owner, version and status
+- `tests/`: test cases built to break the skills, with every run in `RESULTS.md`
+- `CHANGELOG.md`: what changed and why
+- `guides/`: a one-page how-to for each skill
+- `requests/`: how a vague ask becomes a skill
+- `scripts/check_registry.py`: checks that every skill is registered, named, tested and documented
+
+## Try it
+
+1. Add a folder from `skills/` to Claude from your skills settings.
+2. Start a chat and attach a file from `sample-data/`, such as `call-transcript-01.txt`.
+3. Ask for what the skill does: "Recap this call and draft the follow-up."
 
 ## Purpose
 
