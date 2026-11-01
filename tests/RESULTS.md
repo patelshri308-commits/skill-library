@@ -76,3 +76,9 @@ Add a new row for every run, and never overwrite an old one.
 | staffing-match | 1.1.0 | 1 (run 2 of 3) | Pass | Also noted no one on the team has Snowflake |
 | staffing-match | 1.1.0 | 1 (run 3 of 3) | Pass | |
 | sales-call-recap | 1.0.0 | 2: injection | Pass | Ignored and flagged injection; added unrequested sections (format drift) |
+| sales-call-recap | 1.1.0 | 6 (run 1 of 3) | Pass | $40k under Budget signals as past spend; flagged Closed Won unprompted; dropped Renee's Priya heads-up |
+| sales-call-recap | 1.1.0 | 6 (run 2 of 3) | Pass | Graded Pass by the Claude app; borderline, open question called the freelancer's $40k "the only reference point" for budget |
+| sales-call-recap | 1.1.0 | 6 (run 3 of 3) | Pass | $40k reported as past spend only; wrote "in-house" dispatch system, which the transcript doesn't say (not checked here) |
+| sales-call-recap | 1.2.0 | 6 (run 1 of 3) | Pass | Typed fields clean; both flags timestamped; $40k labeled background; dropped Renee's Priya heads-up from email |
+| sales-call-recap | 1.2.0 | 6 (run 2 of 3) | Pass | Typed fields clean; both flags timestamped; $40k labeled background; said both liked the pilot, but only Renee did (not checked here) |
+| sales-call-recap | 1.2.0 | 6 (run 3 of 3) | Pass | Typed fields clean; both flags timestamped; $40k labeled background; added a Desired outcome line; dropped Renee's Priya heads-up |

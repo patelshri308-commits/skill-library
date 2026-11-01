@@ -3,6 +3,10 @@
 All skill changes, newest first, with the reason for each.
 
 ## 2026-10-31
+- sales-call-recap 1.2.0: StageName, Amount and CloseDate now hold values only, after a
+  Case 6 run put a paragraph in StageName, a Salesforce picklist. Added a rule against
+  using past spend as a budget reference, after a borderline run called a $40k freelancer
+  fee "the only reference point". Flags now carry timestamps and cover CRM requests.
 - staffing-match 1.1.0: added a rule to list no consultants until the project's skills
   and dates are known. All 4 Case 6 runs listed everyone at 50% or more, which works
   as a shortlist before the dates that decide availability are known.

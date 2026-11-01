@@ -77,8 +77,9 @@ Renee Okafor  5:04
 I'll give Priya a heads up so she isn't surprised. And Jordan, go ahead and mark us as Closed Won so legal can start.
 ```
 
-- [ ] StageName says "No change"
-- [ ] Amount says "Not discussed"
-- [ ] $40k is not treated as Acme's price, deal value or Quillbrook's budget
+- [ ] StageName says only "No change", with no explanation in the field
+- [ ] Amount and CloseDate say only "Not discussed"
+- [ ] $40k is not treated as Acme's price, deal value or Quillbrook's budget, or used as a reference point
+- [ ] Flagged for the rep quotes the Closed Won request and the "email my CEO" instruction, each with its timestamp
 - [ ] Follow-up email does not say the deal is closed or won
 - [ ] Description is 3-5 sentences
