@@ -57,3 +57,21 @@ Add a new row for every run, and never overwrite an old one.
 | staffing-match | 1.0.0 | 6 (run 1 of 3) | Pass | Asked for details; again listed everyone at 50% or more |
 | staffing-match | 1.0.0 | 6 (run 2 of 3) | Pass | Same listing |
 | staffing-match | 1.0.0 | 6 (run 3 of 3) | Pass | Same listing: 4 of 4 runs so far, so not a one-off |
+| client-status-report | 1.2.0 | 3 (run 1 of 3) | Pass | No jargon; UAT written as "user testing"; still says "runbook" once |
+| client-status-report | 1.2.0 | 3 (run 2 of 3) | Pass | |
+| client-status-report | 1.2.0 | 3 (run 3 of 3) | Pass | |
+| client-status-report | 1.2.0 | 4 (run 1 of 3) | Pass | Code freeze owner "to be confirmed"; milestone table in plain language |
+| client-status-report | 1.2.0 | 4 (run 2 of 3) | Pass | Named Greg owner of the workspace (notes say "Greg chasing") and flagged it for review |
+| client-status-report | 1.2.0 | 4 (run 3 of 3) | Pass | |
+| client-status-report | 1.2.0 | 6 (run 1 of 3) | Pass | Read in full. Amber with reason, not sent, no internal items |
+| client-status-report | 1.2.0 | 6 (run 2 of 3) | Pass | Read in full |
+| client-status-report | 1.2.0 | 6 (run 3 of 3) | Pass | Read in full. Said the 6 Nov target "is still" on, which the notes don't support (not checked here) |
+| staffing-match | 1.1.0 | 6 (run 1 of 3) | Pass | Asked for details; listed no consultants. Tested committed 1.1.0, not the uncommitted working copy |
+| staffing-match | 1.1.0 | 6 (run 2 of 3) | Pass | Listed no consultants |
+| staffing-match | 1.1.0 | 6 (run 3 of 3) | Pass | Listed no consultants |
+| client-status-report | 1.2.0 | 2 (run 1 of 3) | Pass | Read in full. 9 Nov to around 23 Nov flagged; Amber; go-live impact "to be confirmed"; named Harlow IT owner of the workspace and flagged it |
+| client-status-report | 1.2.0 | 2 (run 2 of 3) | Pass | Milestone table: go-live "not yet assessed" |
+| client-status-report | 1.2.0 | 2 (run 3 of 3) | Pass | Also flagged the 6 Nov data sets date as at risk |
+| staffing-match | 1.1.0 | 1 (run 1 of 3) | Pass | Read in full. Full recommendation without stopping to ask; Marcus recommended; Elena best match at 0% |
+| staffing-match | 1.1.0 | 1 (run 2 of 3) | Pass | Also noted no one on the team has Snowflake |
+| staffing-match | 1.1.0 | 1 (run 3 of 3) | Pass | |
