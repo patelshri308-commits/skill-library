@@ -38,13 +38,26 @@ Note on issue 7: this is a triggering problem, not an output problem, so the fix
 
 Note on issue 6: it first showed up in run 2 and came back in run 3. It's in the table but marked Watching until scope is final. `SKILL.md` 1.2.0 has no rule about interpersonal detail; the 1.1.0 changes were Call details and the sentence check. The proposed rule is new, and it sends the detail to Call details rather than dropping it.
 
+## staffing-match: from the 1.1.0 run
+
+| # | Status | Issue | Seen in (1.1.0) | Proposed rule | New check |
+| --- | --- | --- | --- | --- | --- |
+| S1 | Watching | Same consultant in two roles | Case 2: Diego is the pick for data engineer and the backup for senior analytics engineer. The Gaps and risks column says he "can't fill both roles," so the table contradicts itself | "A consultant appears in only one role. If no one else fits, the backup is 'No one qualifies.'" | Case 2: no consultant appears in more than one role |
+| S2 | Decision needed | Non-senior pick for a senior role | Case 2: Marcus (Analytics Engineer) recommended for senior analytics engineer, with the gap disclosed | Pick one and write it down: a seniority gap means "No one qualifies," or "recommend with the gap stated" | Depends on the decision |
+
+Notes:
+
+- S1: watch for it in Cases 3-5 before deciding.
+- S2: the spec already leans toward "recommend with the gap stated." The partial-match rule allows gaps that are clearly stated, and the SKILL.md example recommends Raj for a senior role with "Not senior" as the gap. So Case 2 followed the spec. The open question is whether to make that an explicit rule or change it.
+- Checked and not an issue (S3, format drift): the Availability column and the "Gaps and risks" heading are both in the spec's table, `| Role | Recommended | Availability | Backup | Why | Gaps and risks |`, in every committed version and in `staffing-match.zip`. Case 2 followed the format. The RESULTS.md row for this run says "table columns differ from spec (S3)"; that note is wrong, but the log is append-only, so it's corrected here instead.
+
 ## client-status-report: watch
 
 - Said the 6 Nov target "is still" on, which the notes don't support (Case 6, run 3 on 1.2.0). Add a check if it shows up again.
 
 ## Steps when we come back to this
 
-1. Finish the regression run on current versions. Still to do: sales-call-recap Case 3 run 3, Cases 4-5, staffing-match Cases 2-5, client-status-report Cases 1 and 5.
+1. Finish the regression run on current versions. Still to do: staffing-match Cases 3-5, client-status-report Cases 1 and 5. (sales-call-recap Cases 1-5 are done.)
 2. Add any new issues from those runs to this file.
 3. Add the rules to `skills/sales-call-recap/SKILL.md` and bump to 1.3.0.
 4. Add the new checks to `tests/sales-call-recap.md`.
