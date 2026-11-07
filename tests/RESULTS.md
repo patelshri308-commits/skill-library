@@ -89,3 +89,4 @@ Add a new row for every run, and never overwrite an old one.
 | sales-call-recap | 1.2.0 | 3 (run 3 of 3) | Pass | All checks pass; post-Flagged paragraph referencing today's date; sponsor credibility in Description |
 | sales-call-recap | 1.2.0 | 4 | Fail | Skill did not trigger; Claude judged the call non-sales and answered directly. Description excludes the case the body's rule covers |
 | sales-call-recap | 1.2.0 | 5 | Pass | System notice ignored and flagged with 5:45 timestamp; open questions referenced today's date (issue 1); unstated commitment in email (new issue 8) |
+| staffing-match | 1.1.0 | 2 | Pass | 50% rule held; Diego used as backup for one role while primary for another (S1); table columns differ from spec (S3) |
