@@ -37,6 +37,8 @@ description: What it does. Use when someone asks for X or shares Y.
 - Does it draft or recommend only? Skills never send, update or delete.
 - Does every rule have a sample-data trap or test that proves it works?
 - Could it invent something? Say what to write instead when information is missing.
+- Does it include the required date rule? See "Required in every skill" in the
+  main README. `scripts/check_registry.py` checks for it.
 
 ## Every new skill also needs
 

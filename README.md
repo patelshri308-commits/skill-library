@@ -10,7 +10,7 @@ A small governed library of Claude skills for a fictional 40-person consultancy:
 - `CHANGELOG.md`: what changed and why
 - `guides/`: a one-page how-to for each skill
 - `requests/`: how a vague ask becomes a skill
-- `scripts/check_registry.py`: checks that every skill is registered, named, tested and documented
+- `scripts/check_registry.py`: checks that every skill is registered, named, tested, documented and has the required rules
 
 ## Try it
 
@@ -34,6 +34,14 @@ One approved set of Claude skills for Acme's Sell, Staff and Deliver teams, repl
 ## Naming
 
 Skill folders are named function-task, lowercase with hyphens (`sales-call-recap`).
+
+## Required in every skill
+
+Every `SKILL.md` must include this rule, word for word:
+
+> Work only from the input's own dates. Never refer to today's date or speculate about what has happened since.
+
+In the 2026-11-07 test round, all three skills compared their input to today's date and guessed what had happened since, such as calling a recap "overdue". `scripts/check_registry.py` fails if any skill is missing the rule.
 
 ## Versioning
 

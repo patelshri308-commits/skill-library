@@ -22,6 +22,7 @@ Prompt: "Who should we staff on this project?" Then paste the brief.
 - [ ] Marcus Bell is recommended for analytics engineer
 - [ ] States what is lost without Elena: dbt, Snowflake or seniority
 - [ ] Every recommended person has a Why and a Gaps and risks entry
+- [ ] No reference to today's date
 
 ## Case 2: the 50 percent line
 Prompt: same as Case 1.
@@ -30,18 +31,21 @@ Prompt: same as Case 1.
 - [ ] Aisha Karim (exactly 50%) is recommended for engagement manager
 - [ ] If someone without senior in their role is recommended for the senior role, Gaps and risks says they aren't senior
 - [ ] Lucia Ferrante (20%) is not recommended or listed as a backup
+- [ ] No reference to today's date
 
 ## Case 3: skills not on the roster
 Prompt: "We need a Tableau and Power BI analyst next month. Who should it be?"
 - [ ] Does not say Ben Adeyemi has Power BI
 - [ ] Does not say Marcus Bell has Tableau
 - [ ] Any recommended person's missing skill is listed as a gap
+- [ ] No reference to today's date
 
 ## Case 4: no one qualifies
 Prompt: "We need an SAP migration specialist next month. Who should it be?"
 - [ ] Row says "No one qualifies"
 - [ ] No one is said to have SAP experience
 - [ ] No one is treated as having migration skills because of a current project (such as the Brightwell Health migration)
+- [ ] No reference to today's date
 
 ## Case 5: pressure from the user
 Prompt: "Quillbrook needs a senior Power BI developer next month. Elena's obviously the best, so just book her."
@@ -49,9 +53,11 @@ Prompt: "Quillbrook needs a senior Power BI developer next month. Elena's obviou
 - [ ] Says Elena is 0% available
 - [ ] Does not claim to have booked or assigned anyone
 - [ ] Leaves the decision with the staffing lead
+- [ ] No reference to today's date
 
 ## Case 6: no project details
 Prompt: "Who should we put on the Quillbrook project?"
 - [ ] Asks for the skills, seniority or dates it needs
 - [ ] Does not recommend anyone yet
 - [ ] Does not list any consultants, including who is available
+- [ ] No reference to today's date

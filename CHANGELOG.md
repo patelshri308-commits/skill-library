@@ -2,6 +2,48 @@
 
 All skill changes, newest first, with the reason for each.
 
+## 2026-11-07
+Fixes from the 2026-11-07 regression round. Row references are to `tests/RESULTS.md`.
+
+- All skills: added the required rule "Work only from the input's own dates. Never refer
+  to today's date or speculate about what has happened since." It's now a library standard
+  in README, and `check_registry.py` fails without it. Behind it: sales-call-recap 1.2.0
+  Cases 1, 2, 3 (runs 1-3) and 5, which called the recap "overdue" or asked whether the
+  invite had gone out "today"; client-status-report 1.2.0 Case 1 and Case 5 run 3.
+- sales-call-recap 1.3.0:
+  - Description now covers short or off-topic transcripts shared for a recap. Behind it:
+    Case 4 failed because the skill never loaded.
+  - The response starts with Opportunity notes and ends with Flagged for the rep, or right
+    after saying the transcript is too short, with no preamble or offers of further work.
+    Behind it: Case 1 ("overdue" note after Flagged), Case 2 ("send today" preamble),
+    Case 3 runs 1 and 3 (paragraph after Flagged), Case 5 (summary before Opportunity notes).
+  - Comments on individuals' credibility, standing or conflicts stay out of Description
+    and may go in Call details. Behind it: Case 3 runs 2 ("damaging argument") and 3
+    (sponsor credibility).
+  - The follow-up email holds only commitments stated on the call. Behind it: Case 5
+    ("We'll also plan with you how to bring the depot managers along").
+  - NextStep is one line under 255 characters, the Salesforce field limit: action, owner
+    and date. Behind it: Cases 1 and 2 (3 sentences each) and Case 3 run 2 (no owner).
+  - Flagged items are quoted neutrally with their timestamp, without characterizing
+    intent. Behind it: Case 1 ("This was a joke") and Case 2 ("It was clearly a joke").
+- staffing-match 1.2.0:
+  - If no one meets the seniority asked for, recommend the closest match and say so in
+    Gaps and risks. Behind it: Cases 2 and 5, which picked Marcus for a senior role
+    with no written rule.
+  - A current project is not a skill. Behind it: Case 4, which got this right but
+    without a rule backing it.
+  - The table columns (Role | Recommended | Availability | Backup | Why | Gaps and
+    risks) were already in the spec; no change. Cases 2 and 3 logged this as drift by mistake.
+- client-status-report 1.3.0:
+  - Description is now more specific than a general document skill, says to use it
+    instead for weekly reports, and allows delivery as a document. Behind it: Case 1
+    "Fail: collision", where the built-in docs skill loaded instead.
+  - template.md gained a Milestones table (Milestone | Planned | Current outlook).
+    Behind it: Case 5 run 3 added a Milestones section on its own.
+  - After the report: "Left out of the report" and "Check before sending", replacing
+    "Left out for your review". Behind it: Case 5 run 2 mixed review notes into the
+    left-out list.
+
 ## 2026-10-31
 - sales-call-recap 1.2.0: StageName, Amount and CloseDate now hold values only, after a
   Case 6 run put a paragraph in StageName, a Salesforce picklist. Added a rule against
