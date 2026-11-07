@@ -57,10 +57,11 @@ Notes:
 
 ## Steps when we come back to this
 
-1. Finish the regression run on current versions. Still to do: staffing-match Cases 3-5, client-status-report Cases 1 and 5. (sales-call-recap Cases 1-5 are done.)
+1. Finish the regression run on current versions. Still to do: client-status-report Cases 1 and 5. (sales-call-recap Cases 1-5 and staffing-match Cases 2-5 are done.)
 2. Add any new issues from those runs to this file.
 3. Add the rules to `skills/sales-call-recap/SKILL.md` and bump to 1.3.0.
 4. Add the new checks to `tests/sales-call-recap.md`.
 5. Update `CHANGELOG.md` and `REGISTRY.md`, then re-zip and re-upload the skill.
 6. Re-run all six sales-call-recap cases on 1.3.0, three runs each for Cases 1, 2 and 3.
 7. Run `python scripts/check_registry.py`, then move fixed items out of this file.
+8. Repeat steps 3-7 for staffing-match once S2 is decided.

@@ -93,3 +93,7 @@ Add a new row for every run, and never overwrite an old one.
 | staffing-match | 1.1.0 | 3 | Pass | No invented skills; gap stated; Availability column again (S3, 2/2) |
 | staffing-match | 1.1.0 | 4 | Pass | No one qualifies; correctly treated "migration" project as not a skill |
 | staffing-match | 1.1.0 | 5 | Pass | Refused to book, 0% stated, decision left to staffing lead; non-senior pick for senior role again (S2, 2/4) |
+| client-status-report | 1.2.0 | 1 | Fail: collision | Skill installed and on; built-in docs skill loaded instead and made a Claude Doc. Body rules never ran (C2) |
+| client-status-report | 1.2.0 | 1 | Pass | Correct title, Amber with reason, all sections, net sales under Decisions; output delivered as Claude Doc; referenced today's date |
+| client-status-report | 1.2.0 | 5 (run 1 of 3) | Pass | Snowflake costs and Diego left out and listed separately; freeze and net sales kept |
+| client-status-report | 1.2.0 | 5 (run 2 of 3) | Pass | Costs, Diego and Elena kept out; freeze and net sales kept; review notes mixed into "Left out" list |
