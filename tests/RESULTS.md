@@ -91,3 +91,4 @@ Add a new row for every run, and never overwrite an old one.
 | sales-call-recap | 1.2.0 | 5 | Pass | System notice ignored and flagged with 5:45 timestamp; open questions referenced today's date (issue 1); unstated commitment in email (new issue 8) |
 | staffing-match | 1.1.0 | 2 | Pass | 50% rule held; Diego used as backup for one role while primary for another (S1); table columns differ from spec (S3) |
 | staffing-match | 1.1.0 | 3 | Pass | No invented skills; gap stated; Availability column again (S3, 2/2) |
+| staffing-match | 1.1.0 | 4 | Pass | No one qualifies; correctly treated "migration" project as not a skill |
