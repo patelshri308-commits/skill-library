@@ -6,7 +6,7 @@ Fix them together as one release after the run is finished.
 
 ## sales-call-recap: planned 1.3.0
 
-Version stays 1.3.0. Issues 1-3 are planned for 1.3.0; issues 4-6 are watching. Final scope is decided after the test round.
+Version stays 1.3.0. Issues 1-3 and 7 are planned for 1.3.0; issues 4-6 are watching. Final scope is decided after the test round.
 
 | # | Status | Issue | Seen in (1.2.0) | Proposed rule | New check |
 | --- | --- | --- | --- | --- | --- |
@@ -16,6 +16,7 @@ Version stays 1.3.0. Issues 1-3 are planned for 1.3.0; issues 4-6 are watching. 
 | 4 | Watching | Email turns a promised action into a finished one | Case 2: "thanks for giving Priya a heads-up," but Renee said "I'll give Priya a heads up" | "Keep commitments in the tense they were made. Don't describe promised actions as done." | Case 1: email doesn't say Priya's heads-up already happened |
 | 5 | Watching | Broadens data-handling commitments beyond what was said | Case 3 (run 1 of 3): "anonymized sample," but Sam said "with the driver names stripped out" (4:27). The reviewer counts this as the third run with drifted wording; the earlier two aren't in RESULTS.md. Didn't recur in Case 3 (run 2 of 3), which used "driver names removed" | "Use the transcript's exact wording for data-handling commitments." | Case 1: the sample is described as having driver names removed, not as anonymized |
 | 6 | Watching | Puts comments about individuals' standing or credibility in the Description, a CRM field | Case 3 (run 2 of 3): definitions caused a "damaging argument" in a leadership meeting. Case 3 (run 3 of 3): sponsor's credibility. The transcript has Renee saying "I lost a lot of credibility in that room" (1:27) | "Keep comments about individuals' standing, credibility or internal conflicts out of Description; they may appear in Call details." | Case 3: Description doesn't mention anyone's credibility, standing or internal conflict |
+| 7 | Planned for 1.3.0 | Skill doesn't trigger on short or off-topic calls. The frontmatter description only covers "a sales or discovery call transcript," so Claude answers directly and the small-talk rule in the body never runs | Case 4: Claude judged the call non-sales and answered without the skill | Frontmatter description: "Turns a call transcript into Salesforce opportunity notes and a follow-up email draft. Use whenever someone shares a call transcript (for example from Otter.ai) and asks for a recap, CRM notes or a follow-up, even if the call is short or turns out to have no sales content." | Case 4: the skill loads. Plus a negative check: a request with no call transcript doesn't load the skill |
 
 Notes on issue 1:
 
@@ -30,6 +31,8 @@ Carried over from earlier runs (see RESULTS.md):
 
 - Dropped Renee's heads-up to Priya from the email (Case 6, 2 of 3 runs on 1.2.0).
 - Said both Renee and Sam liked the pilot when only Renee did (Case 6, run 2 on 1.2.0).
+
+Note on issue 7: this is a triggering problem, not an output problem, so the fix goes in the frontmatter description rather than the body rules. Case 4's checklist only checks the response, so it can't tell whether the skill loaded; the new check adds that. A broader description loads the skill on more requests, so the negative check confirms it still stays out of unrelated ones.
 
 Note on issue 6: it first showed up in run 2 and came back in run 3. It's in the table but marked Watching until scope is final. `SKILL.md` 1.2.0 has no rule about interpersonal detail; the 1.1.0 changes were Call details and the sentence check. The proposed rule is new, and it sends the detail to Call details rather than dropping it.
 
