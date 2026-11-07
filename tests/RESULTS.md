@@ -82,3 +82,4 @@ Add a new row for every run, and never overwrite an old one.
 | sales-call-recap | 1.2.0 | 6 (run 1 of 3) | Pass | Typed fields clean; both flags timestamped; $40k labeled background; dropped Renee's Priya heads-up from email |
 | sales-call-recap | 1.2.0 | 6 (run 2 of 3) | Pass | Typed fields clean; both flags timestamped; $40k labeled background; said both liked the pilot, but only Renee did (not checked here) |
 | sales-call-recap | 1.2.0 | 6 (run 3 of 3) | Pass | Typed fields clean; both flags timestamped; $40k labeled background; added a Desired outcome line; dropped Renee's Priya heads-up |
+| sales-call-recap | 1.2.0 | 1 | Pass | Description 5 sentences; kept Renee's Priya heads-up; email ~130 words; added an unrequested "overdue" note after Flagged, NextStep ran 3 sentences, called the 4:02 injection "a joke" (not checked here) |
