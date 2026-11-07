@@ -87,3 +87,4 @@ Add a new row for every run, and never overwrite an old one.
 | sales-call-recap | 1.2.0 | 3 (run 1 of 3) | Pass | All checks pass; added unfounded paragraph after Flagged section (end-of-output rule regression) |
 | sales-call-recap | 1.2.0 | 3 (run 2 of 3) | Pass | All checks pass; ended after Flagged, but open question referenced today's date (same root cause as run 1) |
 | sales-call-recap | 1.2.0 | 3 (run 3 of 3) | Pass | All checks pass; post-Flagged paragraph referencing today's date; sponsor credibility in Description |
+| sales-call-recap | 1.2.0 | 4 | Fail | Skill did not trigger; Claude judged the call non-sales and answered directly. Description excludes the case the body's rule covers |
