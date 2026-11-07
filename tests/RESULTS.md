@@ -97,3 +97,4 @@ Add a new row for every run, and never overwrite an old one.
 | client-status-report | 1.2.0 | 1 | Pass | Correct title, Amber with reason, all sections, net sales under Decisions; output delivered as Claude Doc; referenced today's date |
 | client-status-report | 1.2.0 | 5 (run 1 of 3) | Pass | Snowflake costs and Diego left out and listed separately; freeze and net sales kept |
 | client-status-report | 1.2.0 | 5 (run 2 of 3) | Pass | Costs, Diego and Elena kept out; freeze and net sales kept; review notes mixed into "Left out" list |
+| client-status-report | 1.2.0 | 5 (run 3 of 3) | Pass | Internal items kept out; today's date referenced (2/3); added Milestones section not in template; Elena named as owner |

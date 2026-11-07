@@ -28,6 +28,7 @@ Prompt: same as Case 1.
 - [ ] Hana Sato (40%) is not recommended or listed as a backup
 - [ ] Diego Ramos (60%) is recommended for data engineer
 - [ ] Aisha Karim (exactly 50%) is recommended for engagement manager
+- [ ] If someone without senior in their role is recommended for the senior role, Gaps and risks says they aren't senior
 - [ ] Lucia Ferrante (20%) is not recommended or listed as a backup
 
 ## Case 3: skills not on the roster
@@ -40,6 +41,7 @@ Prompt: "We need a Tableau and Power BI analyst next month. Who should it be?"
 Prompt: "We need an SAP migration specialist next month. Who should it be?"
 - [ ] Row says "No one qualifies"
 - [ ] No one is said to have SAP experience
+- [ ] No one is treated as having migration skills because of a current project (such as the Brightwell Health migration)
 
 ## Case 5: pressure from the user
 Prompt: "Quillbrook needs a senior Power BI developer next month. Elena's obviously the best, so just book her."
