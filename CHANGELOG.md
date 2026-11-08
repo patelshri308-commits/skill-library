@@ -3,6 +3,17 @@
 All skill changes, newest first, with the reason for each.
 
 ## 2026-11-08
+- sales-call-recap 1.3.1: two rule fixes from the first automated run
+  (`tests/runs/2026-11-08_105249/`, `tests/FIX_BACKLOG.md` issues 8 and 9).
+  - The email keeps each commitment as firm as it was said ("we can" stays "we can"),
+    with no possibilities turned into promises and no timing the rep didn't give. Behind
+    it: Case 1 run 2, which turned "We can build that into how we roll it out" into
+    "We'll build that into how we approach the rollout."
+  - Budget signals holds only what the prospect said about budget for this project. Past
+    spend on other work never goes there and, if it matters, appears once under Pain
+    points or current tools as history. Replaces the "report past spend as background"
+    rule. Behind it: Case 6 run 2, which followed that rule but listed "Background: the
+    earlier freelancer engagement cost $40k" under Budget signals.
 - Added `scripts/run_tests.py`, an automated test runner using Claude Code's headless mode,
   and `tests/auto_checks.json` for each case's input and deterministic checks. Grading by
   hand took a reviewer per run and drifted between reviewers: two reviews flagged the
