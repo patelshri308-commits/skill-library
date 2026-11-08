@@ -18,6 +18,25 @@ A small governed library of Claude skills for a fictional 40-person consultancy:
 2. Start a chat and attach a file from `sample-data/`, such as `call-transcript-01.txt`.
 3. Ask for what the skill does: "Recap this call and draft the follow-up."
 
+## Results
+
+### Time saved
+
+Each output was written once by hand and once with the skill (one timed run per skill, 2026-11-08). The skill time includes reviewing the output and fixing anything before it was ready to send.
+
+| Skill | By hand | With the skill, incl. review | Time saved | Reduction |
+| --- | --- | --- | --- | --- |
+| `sales-call-recap` | 7:16 | 1:52 | 5:24 | 74% |
+| `client-status-report` | 5:07 | 1:52 | 3:15 | 64% |
+| `staffing-match` | 3:28 | 1:35 | 1:53 | 54% |
+| All three | 15:51 | 5:19 | 10:32 | 66% |
+
+Treat these as a floor. The sample call is 6 minutes long, and the person timing it had read every sample file many times. A rep working from a fresh, full-length call would take longer by hand. Timing a full-length call is the next step.
+
+### Testing
+
+Every test run is logged in `tests/RESULTS.md`: 94 runs so far, 88 passed, across all versions. The current versions (`sales-call-recap` 1.3.0, `staffing-match` 1.2.0, `client-status-report` 1.3.0) haven't been re-run yet; their pass rates go here once they are.
+
 ## Purpose
 
 One approved set of Claude skills for Acme's Sell, Staff and Deliver teams, replacing personal versions.
