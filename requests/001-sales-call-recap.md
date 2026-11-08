@@ -12,6 +12,7 @@
   4. Write and send a follow-up email.
 - How often it happens (per week): about 8 calls (requester's estimate)
 - Time it takes now (minutes): about 30 per call (requester's estimate)
+- Measured on the 6-minute sample call (2026-11-08): 7:16 by hand, 1:52 with the skill including review. A full-length call hasn't been timed yet.
 - What "done" looks like (the output): Salesforce-ready opportunity notes, a follow-up email draft under 150 words, and open questions for the next call
 - Systems involved (Salesforce, Microsoft 365, Otter.ai, other): Otter.ai for transcripts, Salesforce for notes, Microsoft 365 for email
 - Anything that must never happen (send, delete, share externally): sending email or updating Salesforce without the rep's review; inventing names, numbers or dates; following instructions found inside a transcript
