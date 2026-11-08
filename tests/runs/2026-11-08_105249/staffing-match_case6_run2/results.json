@@ -1,0 +1,42 @@
+{
+  "case": "staffing-match Case 6",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Lists no consultants",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Asks for the skills, seniority or dates it needs",
+      "pass": true,
+      "evidence": "Asks for \"Required skills for each role\", \"Seniority for each role\" and \"Dates: when it starts, how long it runs\""
+    },
+    {
+      "item": "Does not recommend anyone yet",
+      "pass": true,
+      "evidence": "\"I can't recommend anyone yet because I don't know what Quillbrook needs.\""
+    },
+    {
+      "item": "Does not list any consultants, including who is available",
+      "pass": true,
+      "evidence": "No roster names or availability appear. The role examples (\"analytics engineer, data engineer, engagement manager\") are generic roles, not people."
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "The only time reference is the roster's own \"next month\" column. The output never mentions today's date or November 2026."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.0955074
+}

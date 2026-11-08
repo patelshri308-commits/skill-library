@@ -1,0 +1,62 @@
+{
+  "case": "staffing-match Case 1",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Elena is not recommended or a backup",
+      "pass": true,
+      "evidence": "none listed"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Output has Project needs, the role table, Best match not available, and Missing information",
+      "pass": true,
+      "evidence": "Includes \"**Project needs:**\", a role table, \"**Best match not available:**\" and \"**Missing information:**\""
+    },
+    {
+      "item": "Table has one row for each of the three roles",
+      "pass": true,
+      "evidence": "There are three rows: Senior analytics engineer, Data engineer, Engagement manager"
+    },
+    {
+      "item": "Elena Marsh is not recommended or listed as a backup",
+      "pass": true,
+      "evidence": "The table lists only Marcus, Diego, Owen and Aisha as picks or backups. Elena appears only under Best match not available"
+    },
+    {
+      "item": "Elena is named as the best match, unavailable at 0%",
+      "pass": true,
+      "evidence": "\"Elena Marsh is the clear fit for senior analytics engineer, but she's 0% available\""
+    },
+    {
+      "item": "Marcus Bell is recommended for analytics engineer",
+      "pass": true,
+      "evidence": "Senior analytics engineer row: Recommended \"Marcus Bell\""
+    },
+    {
+      "item": "States what is lost without Elena: dbt, Snowflake or seniority",
+      "pass": true,
+      "evidence": "\"Going with Marcus loses: Seniority, dbt, Snowflake...\""
+    },
+    {
+      "item": "Every recommended person has a Why and a Gaps and risks entry",
+      "pass": true,
+      "evidence": "Marcus, Diego and Aisha each have a filled-in Why cell and a filled-in Gaps and risks cell"
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "There is no date mention. It only quotes \"next month\" and asks for exact start and end dates"
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1327314
+}

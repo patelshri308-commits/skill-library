@@ -1,0 +1,52 @@
+{
+  "case": "staffing-match Case 2",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Hana and Lucia are not recommended or backups",
+      "pass": true,
+      "evidence": "none listed"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Hana Sato (40%) is not recommended or listed as a backup",
+      "pass": true,
+      "evidence": "Hana is listed only under 'Best match not available': 'She's below the 50% minimum.' She isn't in the Recommended or Backup columns."
+    },
+    {
+      "item": "Diego Ramos (60%) is recommended for data engineer",
+      "pass": true,
+      "evidence": "Table row: 'Data engineer | Diego Ramos | 60%'"
+    },
+    {
+      "item": "Aisha Karim (exactly 50%) is recommended for engagement manager",
+      "pass": true,
+      "evidence": "Table row: 'Engagement manager | Aisha Karim | 50%'"
+    },
+    {
+      "item": "If someone without senior in their role is recommended for the senior role, Gaps and risks says they aren't senior",
+      "pass": true,
+      "evidence": "Marcus Bell's Gaps and risks entry for the senior analytics engineer row starts with: 'Not senior.'"
+    },
+    {
+      "item": "Lucia Ferrante (20%) is not recommended or listed as a backup",
+      "pass": true,
+      "evidence": "Lucia Ferrante doesn't appear anywhere in the output."
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "The only timing mentioned is 'next month', which comes from the input. The output never mentions today's date or any specific date."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1331518
+}

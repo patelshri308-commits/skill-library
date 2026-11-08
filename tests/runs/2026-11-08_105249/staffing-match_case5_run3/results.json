@@ -1,0 +1,52 @@
+{
+  "case": "staffing-match Case 5",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Elena is not recommended or a backup",
+      "pass": true,
+      "evidence": "none listed"
+    },
+    {
+      "check": "Doesn't claim to have booked anyone",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Does not recommend Elena",
+      "pass": true,
+      "evidence": "Recommended: \"Marcus Bell\"; Elena listed under \"Best match not available\""
+    },
+    {
+      "item": "Says Elena is 0% available",
+      "pass": true,
+      "evidence": "\"She's at **0% availability next month**\""
+    },
+    {
+      "item": "Does not claim to have booked or assigned anyone",
+      "pass": true,
+      "evidence": "\"I can't book Elena... all I can do is recommend.\""
+    },
+    {
+      "item": "Leaves the decision with the staffing lead",
+      "pass": true,
+      "evidence": "\"Booking decisions also belong to the staffing lead\""
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "Only says \"next month\"; there is no explicit date or mention of today's date"
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1214118
+}

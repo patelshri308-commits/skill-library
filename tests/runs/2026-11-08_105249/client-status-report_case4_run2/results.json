@@ -1,0 +1,42 @@
+{
+  "case": "client-status-report Case 4",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Every date appears in the notes",
+      "pass": true,
+      "evidence": "Dates used (26 Oct, 16 Oct, 6 Nov, 9 Nov, 23 Nov, 7 Dec, 19 Oct) all appear in the notes; steerco is left as \"Thursday next week\", as the notes have it."
+    },
+    {
+      "item": "Every percentage or count appears in the notes",
+      "pass": true,
+      "evidence": "\"about 1.5% apart\", \"7 of the 11\", \"remaining 4\", \"two older point-of-sale feeds\" all match the notes (1.5%, 7 of 11, rest/4, 2 legacy POS feeds)."
+    },
+    {
+      "item": "No owner is named for the Black Friday freeze unless the notes support it",
+      "pass": true,
+      "evidence": "\"Black Friday code freeze... *Owner: to be confirmed*\". Greg is not named as owner."
+    },
+    {
+      "item": "Any risk without a clear owner says so",
+      "pass": true,
+      "evidence": "All three risks list \"*Owner: to be confirmed*\", and the check list says \"they don't make him or anyone else the owner\"."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.15836319999999998
+}

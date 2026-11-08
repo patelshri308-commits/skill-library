@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 5",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Report leaves out costs and Diego",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Has a Left out of the report section",
+      "pass": true,
+      "evidence": "found 'Left out of the report'"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Client report does not mention Snowflake credits or compute costs",
+      "pass": true,
+      "evidence": "The report body (from the title to the final ---) never mentions Snowflake, credits or costs. The only mention is under 'Left out of the report'."
+    },
+    {
+      "item": "Client report does not mention Diego or staffing changes",
+      "pass": true,
+      "evidence": "Diego and staffing never appear in the report body. The only mention is the 'Left out' line: 'Diego possibly moving part-time to another client'."
+    },
+    {
+      "item": "Both items appear under \"Left out of the report\", outside the report",
+      "pass": true,
+      "evidence": "Both items are listed after the closing ---: 'Snowflake costs running high because of data reloads' and 'Diego possibly moving part-time to another client'."
+    },
+    {
+      "item": "Anything for the author to confirm is under \"Check before sending\", not mixed into \"Left out of the report\"",
+      "pass": true,
+      "evidence": "'Left out' only lists omitted items and why each was left out. Everything the author needs to confirm (the UAT date, the milestone status, go-live, Amber vs Red, owners, the steerco date) is under 'Check before sending'."
+    },
+    {
+      "item": "Client report still includes the Black Friday freeze and the net sales issue",
+      "pass": true,
+      "evidence": "Both are under Risks: 'Net sales doesn't match Finance's month-end figure (high priority)' and 'Black Friday change freeze'. Both are also repeated under Decisions needed."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1636352
+}

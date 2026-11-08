@@ -1,0 +1,87 @@
+{
+  "case": "sales-call-recap Case 1",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Output starts with Opportunity notes",
+      "pass": true,
+      "evidence": "first line: '**Opportunity notes**'"
+    },
+    {
+      "check": "Nothing after Flagged for the rep",
+      "pass": true,
+      "evidence": "section is last"
+    },
+    {
+      "check": "NextStep is one line under 255 characters",
+      "pass": true,
+      "evidence": "175 characters"
+    },
+    {
+      "check": "Follow-up email is under 150 words",
+      "pass": true,
+      "evidence": "126 words"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Output has all five sections: Opportunity notes, Call details, Follow-up email draft, Open questions for the rep, Flagged for the rep",
+      "pass": true,
+      "evidence": "All five headings are present in order, from \"**Opportunity notes**\" through \"**Flagged for the rep:**\"."
+    },
+    {
+      "item": "Description is 3-5 sentences",
+      "pass": true,
+      "evidence": "The Description has 5 sentences, from \"Quillbrook Logistics runs about 60 trucks...\" to \"Next step is a one-hour data working session...\"."
+    },
+    {
+      "item": "Description covers the two-day manual report or the on-time delivery definitions",
+      "pass": true,
+      "evidence": "\"It takes one analyst about two days, and each depot defines its metrics differently.\""
+    },
+    {
+      "item": "Decision makers in Call details are correct: Renee, Sam, Priya and Tom",
+      "pass": true,
+      "evidence": "Lists \"Renee Okafor: sponsor\", \"Sam Whitlock: technical lead\", \"Priya Nair: controller\" and \"Tom Lindqvist: CEO\"."
+    },
+    {
+      "item": "NextStep includes Sam's sample and the session on Thursday, November 12",
+      "pass": true,
+      "evidence": "\"Sam to send a sample dispatch export... by Tue Nov 10. Jordan to send the invite... on Thu Nov 12.\""
+    },
+    {
+      "item": "NextStep is one line under 255 characters, with action, owner and date",
+      "pass": true,
+      "evidence": "It is a single line of about 175 characters, and each action has an owner (Sam, Jordan) and a date (Tue Nov 10, Thu Nov 12)."
+    },
+    {
+      "item": "Open questions include driver data security",
+      "pass": true,
+      "evidence": "\"Will the security review happen in the November 12 session, or in a separate meeting?\" This follows Sam's concern about driver data."
+    },
+    {
+      "item": "Nothing appears before Opportunity notes or after Flagged for the rep, including offers of further work",
+      "pass": true,
+      "evidence": "The output starts with \"**Opportunity notes**\" and ends with the flagged item \"...pricing wasn't discussed on the call.\" Nothing comes before or after."
+    },
+    {
+      "item": "No mention of today's date and no guesses about what happened after the call",
+      "pass": true,
+      "evidence": "Today's date is never mentioned. The email's \"I hope you've caught up on rest\" is a wish, not a claim about events after the call."
+    },
+    {
+      "item": "Every commitment in the email matches something Jordan said on the call (at 5:26 he said only \"We can build that into how we roll it out\")",
+      "pass": true,
+      "evidence": "Each commitment matches the call: the invite (\"I'll send a few times\"), the security session (\"We can set up a session with one of our data engineers\") and the request to correct the recap (\"so you can correct anything I got wrong\"). The email makes no promise about depot managers."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.20189800000000002
+}

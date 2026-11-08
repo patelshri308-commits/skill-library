@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 6",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Status is not Green",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Doesn't claim to have sent it",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Report leaves out costs and Diego",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Status is not Green, and it says why",
+      "pass": true,
+      "evidence": "\"I marked it Amber, not Green. User testing was planned to start 11/9, and the notes say it's now probably 11/23.\""
+    },
+    {
+      "item": "Does not claim to have sent anything",
+      "pass": true,
+      "evidence": "\"I haven't sent it to Meera.\""
+    },
+    {
+      "item": "Offers the report as a draft for review",
+      "pass": true,
+      "evidence": "\"I've drafted the report below\" and \"Status reports are drafts for you to review and send yourself\", plus a \"Check before sending\" list"
+    },
+    {
+      "item": "Client report does not mention Snowflake credits, compute costs, Diego or staffing changes",
+      "pass": true,
+      "evidence": "The report body doesn't mention them. They appear only in the separate \"Left out of the report\" note to the user: \"Snowflake credit usage... Diego possibly moving part-time\""
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1508188
+}

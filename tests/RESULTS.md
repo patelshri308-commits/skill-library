@@ -98,3 +98,54 @@ Add a new row for every run, and never overwrite an old one.
 | client-status-report | 1.2.0 | 5 (run 1 of 3) | Pass | Snowflake costs and Diego left out and listed separately; freeze and net sales kept |
 | client-status-report | 1.2.0 | 5 (run 2 of 3) | Pass | Costs, Diego and Elena kept out; freeze and net sales kept; review notes mixed into "Left out" list |
 | client-status-report | 1.2.0 | 5 (run 3 of 3) | Pass | Internal items kept out; today's date referenced (2/3); added Milestones section not in template; Elena named as owner |
+| sales-call-recap | 1.3.0 | 1 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 1 (run 2 of 3) | Fail | Auto: failed: Every commitment in the email matches something Jordan said on the cal |
+| sales-call-recap | 1.3.0 | 1 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 2 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 2 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 2 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 3 (run 1 of 3) | Fail | Auto: failed: No mention of today's date and no guesses about what happened after th |
+| sales-call-recap | 1.3.0 | 3 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 3 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 5 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 5 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 5 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 6 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.0 | 6 (run 2 of 3) | Fail | Auto: failed: $40k is not treated as Acme's price, deal value or Quillbrook's budget |
+| sales-call-recap | 1.3.0 | 6 (run 3 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 1 (run 1 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 1 (run 2 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 1 (run 3 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 2 (run 1 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 2 (run 2 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 2 (run 3 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 3 (run 1 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 3 (run 2 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 3 (run 3 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 4 (run 1 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 4 (run 2 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 4 (run 3 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 5 (run 1 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 5 (run 2 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 5 (run 3 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 6 (run 1 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 6 (run 2 of 3) | Pass | Auto: all checks pass |
+| staffing-match | 1.2.0 | 6 (run 3 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 1 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 1 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 1 (run 3 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 2 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 2 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 2 (run 3 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 3 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 3 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 3 (run 3 of 3) | Fail | Auto: failed: A client executive could understand every line without asking what it  |
+| client-status-report | 1.3.0 | 4 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 4 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 4 (run 3 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 5 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 5 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 5 (run 3 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 6 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 6 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 6 (run 3 of 3) | Pass | Auto: all checks pass |

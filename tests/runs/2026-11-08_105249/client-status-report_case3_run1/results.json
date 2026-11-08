@@ -1,0 +1,37 @@
+{
+  "case": "client-status-report Case 3",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "No ticket numbers (HFD-412, HFD-440 and so on)",
+      "pass": true,
+      "evidence": "The client report has no ticket numbers. They only appear in the separate author-facing section, which lists what was cut: \"Ticket numbers (HFD-412, 398, 431, 440)... Left out of the report\"."
+    },
+    {
+      "item": "No unexplained jargon: UAT, CDC, DAG, SCD2, RLS, dbt, P1, gold models, marts",
+      "pass": true,
+      "evidence": "The report uses plain wording instead: \"User testing starts\", \"daily data feed from your ERP system\", \"keep a full history of changes\", \"region-level access in Power BI\", \"business reporting datasets\". The listed terms only appear in the author-facing \"Left out\" note."
+    },
+    {
+      "item": "A client executive could understand every line without asking what it means",
+      "pass": true,
+      "evidence": "Every line is in plain business language, e.g. \"Net sales doesn't match Finance's month-end figure (about 1.5% off). The likely cause is when returns are counted.\" The remaining terms (ERP, Power BI, code freeze, runbook) are familiar to clients, and the client raised the code freeze themselves."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1847562
+}

@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 1",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Has the Milestones table columns",
+      "pass": true,
+      "evidence": "found '| Milestone | Planned | Current outlook |'"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Title has the project name and week of October 26",
+      "pass": true,
+      "evidence": "\"# Harlow Foods data platform: weekly status, week of 26 Oct\""
+    },
+    {
+      "item": "Has Overall status with a one-line reason",
+      "pass": true,
+      "evidence": "\"**Overall status:** Amber. User testing is likely to start about two weeks late because we're still waiting on the testing environment...\" The reason is short, though it runs to two sentences."
+    },
+    {
+      "item": "Has a Milestones table with Milestone, Planned and Current outlook columns",
+      "pass": true,
+      "evidence": "\"| Milestone | Planned | Current outlook |\" table with four rows"
+    },
+    {
+      "item": "Has all four sections: Done this week, Next week, Risks and blockers, Decisions needed from you",
+      "pass": true,
+      "evidence": "Headings: \"## Done this week\", \"## Next week\", \"## Risks and blockers (with owner)\", \"## Decisions needed from you\""
+    },
+    {
+      "item": "Harlow's finance decision on net sales is under Decisions needed from you",
+      "pass": true,
+      "evidence": "\"1. **Net sales definition:** Harlow finance needs to confirm how returns should be treated...\""
+    },
+    {
+      "item": "No mention of today's date and no guesses about what happened after the notes were written",
+      "pass": true,
+      "evidence": "Today's date (8 Nov) isn't mentioned. The 6 Nov milestone is called \"In progress\" as the notes say, and the go-live row says \"Not yet reassessed\" instead of guessing what happened later."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.16858220000000002
+}

@@ -1,0 +1,92 @@
+{
+  "case": "sales-call-recap Case 3",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Output starts with Opportunity notes",
+      "pass": true,
+      "evidence": "first line: '**Opportunity notes**'"
+    },
+    {
+      "check": "Nothing after Flagged for the rep",
+      "pass": true,
+      "evidence": "section is last"
+    },
+    {
+      "check": "NextStep is one line under 255 characters",
+      "pass": true,
+      "evidence": "175 characters"
+    },
+    {
+      "check": "Amount says Not discussed",
+      "pass": true,
+      "evidence": "Amount: 'Not discussed'"
+    },
+    {
+      "check": "CloseDate says Not discussed",
+      "pass": true,
+      "evidence": "CloseDate: 'Not discussed'"
+    },
+    {
+      "check": "StageName says No change",
+      "pass": true,
+      "evidence": "StageName: 'No change'"
+    },
+    {
+      "check": "No budget figure appears",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Amount says \"Not discussed\"",
+      "pass": true,
+      "evidence": "\"**Amount:** Not discussed\""
+    },
+    {
+      "item": "Description is 3-5 sentences",
+      "pass": true,
+      "evidence": "Description has 5 sentences: the trucks/depots one, the manual reporting one, the on-time definitions one, the Renee/Sam goals one, and \"Both sides agreed on a working session...\""
+    },
+    {
+      "item": "CloseDate says \"Not discussed\", and January planning is not used as a close date",
+      "pass": true,
+      "evidence": "\"**CloseDate:** Not discussed\". January appears only under Timeline as \"Next-year planning starts in January\"."
+    },
+    {
+      "item": "No budget figure appears anywhere",
+      "pass": true,
+      "evidence": "\"No budget or amount was discussed.\" The output contains no dollar figure or budget range."
+    },
+    {
+      "item": "StageName says \"No change\"",
+      "pass": true,
+      "evidence": "\"**StageName:** No change\""
+    },
+    {
+      "item": "Description has no comments on anyone's credibility, standing or conflicts",
+      "pass": true,
+      "evidence": "The Description covers only operations, pain and goals. The \"lost a lot of credibility\" quote is under Pain points, not the Description."
+    },
+    {
+      "item": "NextStep is one line under 255 characters and names an owner",
+      "pass": true,
+      "evidence": "It is one line of about 175 characters and names owners: \"Sam to send sample dispatch export... Jordan to send times and a written recap.\""
+    },
+    {
+      "item": "No mention of today's date and no guesses about what happened after the call",
+      "pass": true,
+      "evidence": "The only dates are Nov 10 and Nov 12, both agreed on the call. Nothing mentions Nov 8 or guesses at events after the call."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.18599559999999998
+}

@@ -1,0 +1,42 @@
+{
+  "case": "staffing-match Case 6",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Lists no consultants",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Asks for the skills, seniority or dates it needs",
+      "pass": true,
+      "evidence": "\"Required skills for each role\", \"Seniority for each role\", \"Dates: the start date, how long it runs\""
+    },
+    {
+      "item": "Does not recommend anyone yet",
+      "pass": true,
+      "evidence": "\"I can't recommend anyone for Quillbrook yet... I'll hold off on naming consultants\""
+    },
+    {
+      "item": "Does not list any consultants, including who is available",
+      "pass": true,
+      "evidence": "No consultant names or availability appear; role/skill examples are generic (\"Power BI, dbt, Snowflake\")"
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "No date mentioned; it asks only for the project's \"start date\""
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.09487219999999999
+}

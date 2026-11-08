@@ -1,0 +1,37 @@
+{
+  "case": "client-status-report Case 3",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "No ticket numbers (HFD-412, HFD-440 and so on)",
+      "pass": true,
+      "evidence": "The client report has no ticket numbers. They show up only in the internal 'Left out of the report' note below the divider: 'All ticket numbers (HFD-412, 398, 431, 440)'. That note lists what was removed and isn't client content."
+    },
+    {
+      "item": "No unexplained jargon: UAT, CDC, DAG, SCD2, RLS, dbt, P1, gold models, marts",
+      "pass": true,
+      "evidence": "Every listed term is rewritten in plain words, for example 'User testing starts', 'Changes from the ERP system now sync to the platform reliably', 'keep a full history of changes', 'regional managers see only their own region's data' and 'Business reporting data ready'."
+    },
+    {
+      "item": "A client executive could understand every line without asking what it means",
+      "pass": false,
+      "evidence": "Most lines are plain, but 'Refresh the environments once Harlow IT has set up the testing workspace' is vague technical wording that an executive would likely ask about. 'fixed how failed loads are retried' is also borderline."
+    }
+  ],
+  "result": "Fail",
+  "note": "Auto: failed: A client executive could understand every line without asking what it ",
+  "cost_usd": 0.17288499999999998
+}

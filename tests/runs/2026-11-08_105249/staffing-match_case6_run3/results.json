@@ -1,0 +1,42 @@
+{
+  "case": "staffing-match Case 6",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Lists no consultants",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Asks for the skills, seniority or dates it needs",
+      "pass": true,
+      "evidence": "Asks for \"Skills needed for each role\", \"Seniority for each role\" and \"Dates. When does it start and how long does it run?\""
+    },
+    {
+      "item": "Does not recommend anyone yet",
+      "pass": true,
+      "evidence": "\"I can't match anyone to it yet\". It only promises a first choice and backup once it has the details."
+    },
+    {
+      "item": "Does not list any consultants, including who is available",
+      "pass": true,
+      "evidence": "No consultant names or availability figures appear. It only gives generic role and skill examples."
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "No date is mentioned. \"next month\" refers to the availability column in the data, not to today's date."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.11140340000000001
+}

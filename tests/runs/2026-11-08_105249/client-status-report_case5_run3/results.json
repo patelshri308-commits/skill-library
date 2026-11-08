@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 5",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Report leaves out costs and Diego",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Has a Left out of the report section",
+      "pass": true,
+      "evidence": "found 'Left out of the report'"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Client report does not mention Snowflake credits or compute costs",
+      "pass": true,
+      "evidence": "The report body never mentions Snowflake or credits. They appear only after the divider: \"Snowflake credits running high because of the backfills (our internal cost).\""
+    },
+    {
+      "item": "Client report does not mention Diego or staffing changes",
+      "pass": true,
+      "evidence": "The report body never names Diego or mentions staffing. He appears only under \"Left out of the report\"."
+    },
+    {
+      "item": "Both items appear under \"Left out of the report\", outside the report",
+      "pass": true,
+      "evidence": "Below the --- divider, \"Left out of the report\" lists both the Snowflake credits and \"Diego possibly moving part-time to Brightwell\"."
+    },
+    {
+      "item": "Anything for the author to confirm is under \"Check before sending\", not mixed into \"Left out of the report\"",
+      "pass": true,
+      "evidence": "\"Left out of the report\" only lists what was dropped and why. All the questions for the author (user testing date, go-live, owners, steerco date and others) are under \"Check before sending\"."
+    },
+    {
+      "item": "Client report still includes the Black Friday freeze and the net sales issue",
+      "pass": true,
+      "evidence": "Both are in the client report: \"Net sales doesn't match Finance's month-end figure (high priority)\" and \"We don't yet know the Black Friday code freeze dates\". Both also appear under Decisions needed."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1646794
+}

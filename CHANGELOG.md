@@ -2,6 +2,14 @@
 
 All skill changes, newest first, with the reason for each.
 
+## 2026-11-08
+- Added `scripts/run_tests.py`, an automated test runner using Claude Code's headless mode,
+  and `tests/auto_checks.json` for each case's input and deterministic checks. Grading by
+  hand took a reviewer per run and drifted between reviewers: two reviews flagged the
+  staffing table's columns as drift when the spec already had them. Each case now runs in
+  an isolated temp directory, is checked by code where possible and by a strict judge for
+  the rest, and is saved under `tests/runs/`. No skill, checklist or registry changes.
+
 ## 2026-11-07
 Fixes from the 2026-11-07 regression round. Row references are to `tests/RESULTS.md`.
 

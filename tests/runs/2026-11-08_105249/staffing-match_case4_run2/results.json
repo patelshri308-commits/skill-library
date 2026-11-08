@@ -1,0 +1,42 @@
+{
+  "case": "staffing-match Case 4",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Says No one qualifies",
+      "pass": true,
+      "evidence": "found 'No one qualifies'"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Row says \"No one qualifies\"",
+      "pass": true,
+      "evidence": "Table row: \"SAP migration specialist | No one qualifies | \u2013 | No one qualifies\""
+    },
+    {
+      "item": "No one is said to have SAP experience",
+      "pass": true,
+      "evidence": "\"none of the eight consultants has SAP listed as a skill\"; Diego \"has no SAP skills\""
+    },
+    {
+      "item": "No one is treated as having migration skills because of a current project (such as the Brightwell Health migration)",
+      "pass": true,
+      "evidence": "\"His current project, the Brightwell Health migration, doesn't count as SAP experience.\" His partial fit is based on the skills he lists, not on the project."
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "The output only says \"next month\" (taken from the prompt) and \"exact start date\". It never mentions today's date or November 2026."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.12754079999999998
+}

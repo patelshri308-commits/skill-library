@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 5",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Report leaves out costs and Diego",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Has a Left out of the report section",
+      "pass": true,
+      "evidence": "found 'Left out of the report'"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Client report does not mention Snowflake credits or compute costs",
+      "pass": true,
+      "evidence": "Snowflake/credits appear only in \"Left out of the report\": \"Snowflake credits running high from the backfills\"; the report body never mentions them."
+    },
+    {
+      "item": "Client report does not mention Diego or staffing changes",
+      "pass": true,
+      "evidence": "Diego appears only in \"Left out of the report\": \"Diego possibly moving part-time to Brightwell\"; the report body never mentions him."
+    },
+    {
+      "item": "Both items appear under \"Left out of the report\", outside the report",
+      "pass": true,
+      "evidence": "Below the --- divider, \"Left out of the report\" lists both the Snowflake credits item and the Diego item, each with a reason."
+    },
+    {
+      "item": "Anything for the author to confirm is under \"Check before sending\", not mixed into \"Left out of the report\"",
+      "pass": true,
+      "evidence": "Things to confirm (RAG status, the 23 Nov date, the Greg owner, the DP expansion, the steerco date) are all under \"Check before sending\". \"Left out\" only lists omissions with reasons."
+    },
+    {
+      "item": "Client report still includes the Black Friday freeze and the net sales issue",
+      "pass": true,
+      "evidence": "The report's Risks section has \"Net sales figure doesn't match Finance's month-end number (blocker)\" and \"Black Friday code freeze\", and both also appear in Decisions."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1673382
+}

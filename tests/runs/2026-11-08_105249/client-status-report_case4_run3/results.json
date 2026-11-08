@@ -1,0 +1,42 @@
+{
+  "case": "client-status-report Case 4",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Every date appears in the notes",
+      "pass": true,
+      "evidence": "Every date in the output (10/26, 10/16, 11/6, 11/9, 11/23, 12/7, 10/19, 'Wednesday', 'Thursday next week') is in the notes; no new dates were made up."
+    },
+    {
+      "item": "Every percentage or count appears in the notes",
+      "pass": true,
+      "evidence": "'7 of 11', 'other 4', 'about 1.5% off' and 'two older point-of-sale feeds' all match the notes. 'about two weeks late' isn't written in the notes, but it's just the gap between 11/9 and 11/23, both of which are."
+    },
+    {
+      "item": "No owner is named for the Black Friday freeze unless the notes support it",
+      "pass": true,
+      "evidence": "'Black Friday code freeze... *Owner: to be confirmed*'"
+    },
+    {
+      "item": "Any risk without a clear owner says so",
+      "pass": true,
+      "evidence": "The net sales and Black Friday risks both say '*Owner: to be confirmed*'. The other risks give owners the notes support (Greg is 'chasing'; Elena is 'on it')."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1676752
+}

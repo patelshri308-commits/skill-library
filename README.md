@@ -10,6 +10,7 @@ A small governed library of Claude skills for a fictional 40-person consultancy:
 - `CHANGELOG.md`: what changed and why
 - `guides/`: a one-page how-to for each skill
 - `requests/`: how a vague ask becomes a skill
+- `scripts/run_tests.py`: runs the test cases with Claude Code and grades them (see Running the tests)
 - `scripts/check_registry.py`: checks that every skill is registered, named, tested, documented and has the required rules
 
 ## Try it
@@ -36,6 +37,33 @@ Treat these as a floor. The sample call is 6 minutes long, and the person timing
 ### Testing
 
 Every test run is logged in `tests/RESULTS.md`: 94 runs so far, 88 passed, across all versions. The current versions (`sales-call-recap` 1.3.0, `staffing-match` 1.2.0, `client-status-report` 1.3.0) haven't been re-run yet; their pass rates go here once they are.
+
+## Running the tests
+
+`scripts/run_tests.py` runs each test case in `tests/<skill>.md` with Claude Code's headless mode, grades it and saves the results.
+
+**Requirements:** Claude Code installed and signed in (`claude` on your PATH), and Python 3.10 or later. No other dependencies. Every case makes two `claude -p` calls, one to run the skill and one to grade it, and both count against your plan's usage. One Case 1 run cost about $0.20 as reported by the CLI.
+
+**Commands:**
+
+```bash
+python3 scripts/run_tests.py --dry-run                           # list what would run; no Claude calls
+python3 scripts/run_tests.py --skill sales-call-recap --case 1   # one case
+python3 scripts/run_tests.py --repeat 3 --log                    # every case 3 times, logged to RESULTS.md
+python3 scripts/run_tests.py --invoke                            # start prompts with /skill-name
+```
+
+Without `--log`, nothing is written to `tests/RESULTS.md`. Every run saves to `tests/runs/<timestamp>/`: the prompt, the raw stream, the output, the judge's JSON, the check results and a `summary.md` with pass counts and total cost.
+
+**Automated and manual cases:** 17 cases run automatically. Three test whether a skill triggers in the Claude app, including the clash with the app's built-in docs skill, which Claude Code can't reproduce: sales-call-recap Cases 4 and 7, and client-status-report Case 7. The script skips them and lists them, with their prompts, under "Run these in the Claude app".
+
+**How grading works:**
+
+1. **Isolation.** Each case runs in a fresh temp directory holding only copies of the three skills. The run can't see this repo, its CLAUDE.md or the checklists. `--setting-sources project` keeps out personal skills, skills synced from claude.ai, plugins and MCP servers.
+2. **Prompt.** The case's Prompt line plus the input, as if pasted into a chat, so the skill has to load on its own. The stream-json output shows whether it loaded and that it was the repo's copy. A skill that didn't load is "Fail: not loaded".
+3. **Deterministic checks.** Code checks what it can verify reliably: the output's first and last sections, NextStep length, email word count, required timestamps, names that must not be recommended, and no reference to today's date. These live in `tests/auto_checks.json` with each case's input.
+4. **Judge.** A second `claude -p` call, with no skills and no tools, grades every checklist item and returns pass/fail with one line of evidence each. It's told to be strict and fail anything it's unsure about.
+5. **Result.** A case passes only if every check and every checklist item passes. A crash or timeout is logged as "Error", not "Fail". Conditions in the test files, such as "only if Case 2 passes", are respected. Logged notes start with "Auto:".
 
 ## Purpose
 

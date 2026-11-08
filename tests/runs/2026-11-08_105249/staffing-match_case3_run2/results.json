@@ -1,0 +1,37 @@
+{
+  "case": "staffing-match Case 3",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Does not say Ben Adeyemi has Power BI",
+      "pass": true,
+      "evidence": "\"Ben has no Power BI listed\""
+    },
+    {
+      "item": "Does not say Marcus Bell has Tableau",
+      "pass": true,
+      "evidence": "\"Marcus has no Tableau listed.\""
+    },
+    {
+      "item": "Any recommended person's missing skill is listed as a gap",
+      "pass": true,
+      "evidence": "Gaps column: \"Marcus has no Tableau listed. Ben has no Power BI listed, is a Junior Data Analyst\""
+    },
+    {
+      "item": "No reference to today's date",
+      "pass": true,
+      "evidence": "Only says \"next month\" and asks for \"exact start and end dates\"; it never mentions today's date"
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.11010919999999999
+}

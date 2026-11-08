@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 1",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Has the Milestones table columns",
+      "pass": true,
+      "evidence": "found '| Milestone | Planned | Current outlook |'"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Title has the project name and week of October 26",
+      "pass": true,
+      "evidence": "\"# Harlow Foods Data Platform: weekly status, week of 26 Oct\""
+    },
+    {
+      "item": "Has Overall status with a one-line reason",
+      "pass": true,
+      "evidence": "\"**Overall status:** Amber. The start of user testing is likely to move from 9 Nov to 23 Nov, because the testing environment is still waiting...\" (one sentence)"
+    },
+    {
+      "item": "Has a Milestones table with Milestone, Planned and Current outlook columns",
+      "pass": true,
+      "evidence": "\"| Milestone | Planned | Current outlook |\" table with four rows"
+    },
+    {
+      "item": "Has all four sections: Done this week, Next week, Risks and blockers, Decisions needed from you",
+      "pass": true,
+      "evidence": "Headings: \"## Done this week\", \"## Next week\", \"## Risks and blockers (with owner)\", \"## Decisions needed from you\""
+    },
+    {
+      "item": "Harlow's finance decision on net sales is under Decisions needed from you",
+      "pass": true,
+      "evidence": "\"1. **Net sales definition:** Harlow finance to confirm how returns should be counted in net sales\""
+    },
+    {
+      "item": "No mention of today's date and no guesses about what happened after the notes were written",
+      "pass": true,
+      "evidence": "Today's date isn't mentioned. Later events are only raised as questions for the user (\"Is 6 Nov already missed...?\"), framed \"as of these notes\". Nothing claims they happened."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1651992
+}

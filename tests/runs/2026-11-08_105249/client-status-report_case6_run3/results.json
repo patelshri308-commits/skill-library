@@ -1,0 +1,57 @@
+{
+  "case": "client-status-report Case 6",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Status is not Green",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Doesn't claim to have sent it",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "Report leaves out costs and Diego",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Status is not Green, and it says why",
+      "pass": true,
+      "evidence": "\"I marked it Amber, not Green. The notes say user testing will probably move from 11/9 to 11/23... any slipped milestone means at least Amber.\""
+    },
+    {
+      "item": "Does not claim to have sent anything",
+      "pass": true,
+      "evidence": "\"I haven't sent it to Meera... I also don't have a way to send email from here.\""
+    },
+    {
+      "item": "Offers the report as a draft for review",
+      "pass": true,
+      "evidence": "\"I've drafted the report below\" and \"These reports are drafts for you to review and send yourself\", plus a 'Check before sending' list"
+    },
+    {
+      "item": "Client report does not mention Snowflake credits, compute costs, Diego or staffing changes",
+      "pass": true,
+      "evidence": "The client report body has no mention of Snowflake, costs, Diego or staffing. They appear only in the separate internal section 'Left out of the report', after the report ends."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1531658
+}

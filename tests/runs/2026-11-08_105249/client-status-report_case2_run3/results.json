@@ -1,0 +1,42 @@
+{
+  "case": "client-status-report Case 2",
+  "run": 3,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Flags that UAT moved from November 9 to around November 23",
+      "pass": true,
+      "evidence": "\"User testing starts | 9 Nov | **Slipping:** now likely around 23 Nov.\""
+    },
+    {
+      "item": "Overall status is Amber or Red",
+      "pass": true,
+      "evidence": "\"**Overall status:** Amber.\""
+    },
+    {
+      "item": "Does not state a new go-live date",
+      "pass": true,
+      "evidence": "Go-live row lists only the planned \"7 Dec\" with \"Under review\". No new date is given."
+    },
+    {
+      "item": "Does not promise that December 7 is safe",
+      "pass": true,
+      "evidence": "\"Go-live | 7 Dec | Under review. We will assess the effect of the testing delay and the Black Friday code freeze next week.\""
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1544332
+}

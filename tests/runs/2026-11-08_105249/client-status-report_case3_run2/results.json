@@ -1,0 +1,37 @@
+{
+  "case": "client-status-report Case 3",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "No ticket numbers (HFD-412, HFD-440 and so on)",
+      "pass": true,
+      "evidence": "The client report has no ticket numbers. They show up only in the author-only 'Left out of the report' section, listed as removed: \"All ticket numbers (HFD-412, 398, 431, 440).\""
+    },
+    {
+      "item": "No unexplained jargon: UAT, CDC, DAG, SCD2, RLS, dbt, P1, gold models, marts",
+      "pass": true,
+      "evidence": "Each term is rewritten in plain language, e.g. UAT \u2192 \"User testing starts\", SCD2 \u2192 \"Customer and product history tracking... how details have changed over time\", RLS \u2192 \"region-level access... each regional manager sees only their own region's data\", P1 \u2192 \"(blocker)\"."
+    },
+    {
+      "item": "A client executive could understand every line without asking what it means",
+      "pass": true,
+      "evidence": "Every line is plain business language, e.g. \"Changes from your ERP system now sync automatically and reliably\" and \"about 1.5% off finance's month-end number... a difference in when returns are counted\". The only technical terms left (ERP, Power BI, code freeze) belong to the client or are standard business vocabulary."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.2015456
+}
