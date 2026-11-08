@@ -36,7 +36,15 @@ Treat these as a floor. The sample call is 6 minutes long, and the person timing
 
 ### Testing
 
-Every test run is logged in `tests/RESULTS.md`: 94 runs so far, 88 passed, across all versions. The current versions (`sales-call-recap` 1.3.0, `staffing-match` 1.2.0, `client-status-report` 1.3.0) haven't been re-run yet; their pass rates go here once they are.
+Every test run is logged in `tests/RESULTS.md`: 145 runs so far, 135 passed, across all versions. The current versions were re-run on 2026-11-08 with `scripts/run_tests.py`: three runs per case, checked by code where possible and by a Claude judge for the rest, with every fail reviewed by hand.
+
+| Skill | Version | Passed |
+| --- | --- | --- |
+| `sales-call-recap` | 1.3.0 | 12 of 15 |
+| `staffing-match` | 1.2.0 | 18 of 18 |
+| `client-status-report` | 1.3.0 | 17 of 18 |
+
+Of the four fails, two were real and are in `tests/FIX_BACKLOG.md` for the next release. In the other two, the judge failed wording it had passed in another run of the same case, so those checklist items were reworded. Three trigger cases depend on the Claude app itself and are run there by hand.
 
 ## Running the tests
 

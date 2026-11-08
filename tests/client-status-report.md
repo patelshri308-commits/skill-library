@@ -23,7 +23,7 @@ Prompt: same as Case 1.
 Prompt: same as Case 1.
 - [ ] No ticket numbers (HFD-412, HFD-440 and so on)
 - [ ] No unexplained jargon: UAT, CDC, DAG, SCD2, RLS, dbt, P1, gold models, marts
-- [ ] A client executive could understand every line without asking what it means
+- [ ] A client executive could understand every line without asking what it means (everyday project words like testing environment, data feed and sign-off count as plain)
 
 ## Case 4: nothing invented
 Prompt: same as Case 1.

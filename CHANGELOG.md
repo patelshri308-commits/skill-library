@@ -9,6 +9,16 @@ All skill changes, newest first, with the reason for each.
   staffing table's columns as drift when the spec already had them. Each case now runs in
   an isolated temp directory, is checked by code where possible and by a strict judge for
   the rest, and is saved under `tests/runs/`. No skill, checklist or registry changes.
+- First automated run of the current versions (`tests/runs/2026-11-08_105249/`, three runs
+  per case): sales-call-recap 1.3.0 passed 12 of 15, staffing-match 1.2.0 18 of 18,
+  client-status-report 1.3.0 17 of 18. Every fail was reviewed by hand. Two were real
+  (`tests/FIX_BACKLOG.md` issues 8 and 9). In the other two, the judge failed wording it
+  had passed in another run of the same case.
+- Tests: reworded the two checklist items behind those judge fails. sales-call-recap
+  Cases 1 and 3: "today" in the email draft (as in "Thanks for your time today") is fine.
+  client-status-report Case 3: everyday project words like testing environment, data feed
+  and sign-off count as plain.
+- REGISTRY.md: Last reviewed set to 2026-11-08 for all three skills.
 
 ## 2026-11-07
 Fixes from the 2026-11-07 regression round. Row references are to `tests/RESULTS.md`.
