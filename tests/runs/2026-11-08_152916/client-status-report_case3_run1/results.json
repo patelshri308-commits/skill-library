@@ -1,0 +1,37 @@
+{
+  "case": "client-status-report Case 3",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "No ticket numbers (HFD-412, HFD-440 and so on)",
+      "pass": true,
+      "evidence": "The client report has no ticket numbers. They show up only in the separate note to the author below the '---' line: 'Ticket numbers (HFD-412, 398, 431, 440)' listed as left out."
+    },
+    {
+      "item": "No unexplained jargon: UAT, CDC, DAG, SCD2, RLS, dbt, P1, gold models, marts",
+      "pass": true,
+      "evidence": "The report rewrites each term in plain words, e.g. 'User testing starts', 'keep a full history of changes', 'sees only their own region's data', 'high priority', 'Business-ready reporting data'. The raw terms appear only in the author note's list of rewrites."
+    },
+    {
+      "item": "A client executive could understand every line without asking what it means (everyday project words like testing environment, data feed and sign-off count as plain)",
+      "pass": true,
+      "evidence": "Every line is in plain language, e.g. 'Daily updates from the finance and operations system now arrive reliably', '7 of 11 data sets have passed quality checks', 'Harlow has a change freeze around Black Friday'. 'Power BI' is the client's own tool."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1731162
+}

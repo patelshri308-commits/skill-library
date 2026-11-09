@@ -1,0 +1,87 @@
+{
+  "case": "sales-call-recap Case 1",
+  "run": 1,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Output starts with Opportunity notes",
+      "pass": true,
+      "evidence": "first line: '**Opportunity notes**'"
+    },
+    {
+      "check": "Nothing after Flagged for the rep",
+      "pass": true,
+      "evidence": "section is last"
+    },
+    {
+      "check": "NextStep is one line under 255 characters",
+      "pass": true,
+      "evidence": "180 characters"
+    },
+    {
+      "check": "Follow-up email is under 150 words",
+      "pass": true,
+      "evidence": "145 words"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "Output has all five sections: Opportunity notes, Call details, Follow-up email draft, Open questions for the rep, Flagged for the rep",
+      "pass": true,
+      "evidence": "All five headers are present in order: \"**Opportunity notes**\", \"**Call details**\", \"**Follow-up email draft**\", \"**Open questions for the rep**\", \"**Flagged for the rep:**\"."
+    },
+    {
+      "item": "Description is 3-5 sentences",
+      "pass": true,
+      "evidence": "The Description has 5 sentences, from \"Quillbrook Logistics runs about 60 trucks...\" to \"Jordan proposed starting with one depot and one metric...\"."
+    },
+    {
+      "item": "Description covers the two-day manual report or the on-time delivery definitions",
+      "pass": true,
+      "evidence": "It covers both: \"takes one analyst about two days\" and \"Depots define metrics differently, especially on-time delivery\"."
+    },
+    {
+      "item": "Decision makers in Call details are correct: Renee, Sam, Priya and Tom",
+      "pass": true,
+      "evidence": "Lists all four with correct roles: \"Renee Okafor: sponsor\", \"Sam Whitlock: technical lead\", \"Priya Nair: controller\", \"Tom Lindqvist: CEO\"."
+    },
+    {
+      "item": "NextStep includes Sam's sample and the session on Thursday, November 12",
+      "pass": true,
+      "evidence": "\"Sam to send a sample dispatch export ... by Tue Nov 10. Working session with Sam and an Acme engineer on Thu Nov 12.\""
+    },
+    {
+      "item": "NextStep is one line under 255 characters, with action, owner and date",
+      "pass": true,
+      "evidence": "It is one unbroken line of about 180 characters, with owners (Sam, Jordan), actions (send the sample, hold the session) and dates (Tue Nov 10, Thu Nov 12)."
+    },
+    {
+      "item": "Open questions include driver data security",
+      "pass": true,
+      "evidence": "\"What security or data-handling requirements does Sam need covered, and should the security session be part of the Nov 12 session or separate?\" This is Sam's concern about driver data."
+    },
+    {
+      "item": "Nothing appears before Opportunity notes or after Flagged for the rep, including offers of further work",
+      "pass": true,
+      "evidence": "The output starts with \"**Opportunity notes**\" and ends with the flag line \"...Jordan said a person will handle communication with Tom.\" There is no preamble and no offer of more work."
+    },
+    {
+      "item": "No mention of today's date and no guesses about what happened after the call (\"today\" in the email draft, as in \"Thanks for your time today\", is fine)",
+      "pass": true,
+      "evidence": "The email says \"Thanks for your time on Tuesday\". Nowhere does the output mention today's date or guess what happened after the call."
+    },
+    {
+      "item": "Every commitment in the email matches something Jordan said on the call (at 5:26 he said only \"We can build that into how we roll it out\")",
+      "pass": true,
+      "evidence": "Each commitment matches the call. The security session matches 2:59 (\"We can set up a session with one of our data engineers\"). \"I'll send a few times\" matches 4:36. \"We can also plan how to bring the depot managers along into the rollout\" restates 5:26 and adds no new commitment."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.24388900000000002
+}

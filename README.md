@@ -36,15 +36,15 @@ Treat these as a floor. The sample call is 6 minutes long, and the person timing
 
 ### Testing
 
-Every test run is logged in `tests/RESULTS.md`: 145 runs so far, 135 passed, across all versions. The current versions were re-run on 2026-11-08 with `scripts/run_tests.py`: three runs per case, checked by code where possible and by a Claude judge for the rest, with every fail reviewed by hand.
+Every test run is logged in `tests/RESULTS.md`: 178 runs across all versions. Since 2026-11-08 the runs are automated with `scripts/run_tests.py`: three runs per case, checked by code where possible and by a Claude judge for the rest, with every fail reviewed by hand. Latest results on the current versions:
 
-| Skill | Version | Passed |
-| --- | --- | --- |
-| `sales-call-recap` | 1.3.0 | 12 of 15 |
-| `staffing-match` | 1.2.0 | 18 of 18 |
-| `client-status-report` | 1.3.0 | 17 of 18 |
+| Skill | Version | Passed | Run |
+| --- | --- | --- | --- |
+| `sales-call-recap` | 1.3.2 | 15 of 15 | 2026-11-09 |
+| `staffing-match` | 1.2.0 | 18 of 18 | 2026-11-08 |
+| `client-status-report` | 1.3.0 | 17 of 18, then Case 3 3 of 3 after rewording its checklist item | 2026-11-08 |
 
-Of the four fails, two were real and are in `tests/FIX_BACKLOG.md` for the next release. In the other two, the judge failed wording it had passed in another run of the same case, so those checklist items were reworded. Three trigger cases depend on the Claude app itself and are run there by hand.
+Reviewing every fail by hand is part of the process, because the grading can be wrong too. It found two checklist items the judge scored inconsistently, and a bug in the email word count that failed four emails that were under the limit. Both were fixed and logged in `tests/FIX_BACKLOG.md`. The trigger cases depend on the Claude app itself and are run there by hand.
 
 ## Running the tests
 
@@ -71,7 +71,8 @@ Without `--log`, nothing is written to `tests/RESULTS.md`. Every run saves to `t
 2. **Prompt.** The case's Prompt line plus the input, as if pasted into a chat, so the skill has to load on its own. The stream-json output shows whether it loaded and that it was the repo's copy. A skill that didn't load is "Fail: not loaded".
 3. **Deterministic checks.** Code checks what it can verify reliably: the output's first and last sections, NextStep length, email word count, required timestamps, names that must not be recommended, and no reference to today's date. These live in `tests/auto_checks.json` with each case's input.
 4. **Judge.** A second `claude -p` call, with no skills and no tools, grades every checklist item and returns pass/fail with one line of evidence each. It's told to be strict and fail anything it's unsure about.
-5. **Result.** A case passes only if every check and every checklist item passes. A crash or timeout is logged as "Error", not "Fail". Conditions in the test files, such as "only if Case 2 passes", are respected. Logged notes start with "Auto:".
+5. **Result.** A case passes only if every check and every checklist item passes. A crash or timeout is logged as "Error", not "Fail". Logged notes start with "Auto:".
+6. **Conditions.** A condition in a test file, such as "only if Case 2 passes", is for testing by hand. Automated runs run the case anyway; if the condition wasn't met, the Note says so, for example "Auto: all checks pass (Case 2 failed 1 of 3 this run)".
 
 ## Purpose
 

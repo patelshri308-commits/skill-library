@@ -514,8 +514,11 @@ def run_check(check, output, names):
         body = split_output(output, names).get(check["section"])
         if body is None:
             return False, f"no '{check['section']}' section"
+        # Count real words only: skip the subject line, and don't count markdown
+        # markers such as "-" bullets or ">" quote marks as words.
         words = [w for line in body.splitlines()
-                 if not clean(line).lower().startswith("subject:") for w in line.split()]
+                 if not clean(line).lstrip("> ").lower().startswith("subject:")
+                 for w in line.split() if re.search(r"[A-Za-z0-9]", w)]
         return len(words) <= check["max"], f"{len(words)} words"
 
     if kind in ("absent", "present"):
@@ -671,12 +674,16 @@ def latest_logged_result(skill, version, number):
 
 
 def condition_met(case, outcomes, version):
-    """For 'only if Case N passes': Case N must pass every run here, or, if it
-    wasn't run this time, its latest logged result on this version must be Pass."""
+    """For 'only if Case N passes'. The condition is for testing by hand: automated
+    runs always run the case and use this only to note when the condition wasn't met.
+    Met means Case N passed every run here, or, if it wasn't run this time, its latest
+    logged result on this version is Pass. Returns (met, detail for the Note)."""
     ran = [o for o in outcomes if o.case.skill == case.skill and o.case.number == case.condition]
     if ran:
-        return all(o.result == "Pass" for o in ran), "this run"
-    return latest_logged_result(case.skill, version, case.condition) == "Pass", "RESULTS.md"
+        failed = sum(o.result != "Pass" for o in ran)
+        return failed == 0, f"Case {case.condition} failed {failed} of {len(ran)} this run"
+    latest = latest_logged_result(case.skill, version, case.condition)
+    return latest == "Pass", f"Case {case.condition} latest in RESULTS.md: {latest or 'not logged'}"
 
 
 # --------------------------------------------------------------------------
@@ -765,7 +772,7 @@ def main():
     if args.dry_run:
         print(f"{len(automated)} automated case(s), x{args.repeat} run(s) each:")
         for c in automated:
-            cond = f"  [runs only if Case {c.condition} passes]" if c.condition else ""
+            cond = f"  [runs even if Case {c.condition} fails; noted]" if c.condition else ""
             print(f"  {c.skill} {versions[c.skill]}  Case {c.number}: {c.title}  "
                   f"({len(c.checklist)} checklist items, {len(c.checks) + 1} code checks)"
                   f"{cond}")
@@ -781,16 +788,16 @@ def main():
     for case in automated:
         for run in range(1, args.repeat + 1):
             tag = f"{case.label}" + (f" (run {run} of {args.repeat})" if args.repeat > 1 else "")
+            unmet = None
             if case.condition:
-                ok, source = condition_met(case, outcomes, versions[case.skill])
+                ok, detail = condition_met(case, outcomes, versions[case.skill])
                 if not ok:
-                    o = Outcome(case, run, "Skipped",
-                                f"Case {case.condition} hasn't passed ({source})")
-                    outcomes.append(o)
-                    print(f"{tag}: Skipped, {o.note}")
-                    continue
+                    unmet = detail
+                    print(f"{tag}: condition not met ({detail}), running anyway")
             print(f"{tag}: running...", flush=True)
             o = run_case(case, run, sidecar[case.skill], args.invoke, run_dir)
+            if unmet:
+                o.note += f" ({unmet})"
             outcomes.append(o)
             print(f"{tag}: {o.result}. {o.note} (${o.cost:.2f})", flush=True)
 

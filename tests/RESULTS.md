@@ -149,3 +149,41 @@ Add a new row for every run, and never overwrite an old one.
 | client-status-report | 1.3.0 | 6 (run 1 of 3) | Pass | Auto: all checks pass |
 | client-status-report | 1.3.0 | 6 (run 2 of 3) | Pass | Auto: all checks pass |
 | client-status-report | 1.3.0 | 6 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 1 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 1 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 1 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 2 (run 1 of 3) | Fail | Auto: failed: Follow-up email is under 150 words |
+| sales-call-recap | 1.3.1 | 2 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 2 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 3 (run 1 of 3) | Fail | Auto: failed: No mention of today's date and no guesses about what happened after th |
+| sales-call-recap | 1.3.1 | 3 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 3 (run 3 of 3) | Fail | Auto: failed: Description has no comments on anyone's credibility, standing or confl |
+| sales-call-recap | 1.3.1 | 6 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 6 (run 2 of 3) | Fail | Auto: failed: Follow-up email is under 150 words |
+| sales-call-recap | 1.3.1 | 6 (run 3 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 3 (run 1 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 3 (run 2 of 3) | Pass | Auto: all checks pass |
+| client-status-report | 1.3.0 | 3 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 4 | Pass | Manual (Claude app): skill loaded; all checklist items passed |
+| sales-call-recap | 1.3.1 | 7 | Pass | Manual (Claude app): skill did not load on an unrelated request |
+| sales-call-recap | 1.3.1 | 6 (smoke, before the full re-run) | Fail | Auto: email 161 words (limit 150); run folder 2026-11-08_120208, logged by hand |
+| sales-call-recap | 1.3.2 | 1 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 1 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 1 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 2 (run 1 of 3) | Fail | Auto: failed: Follow-up email is under 150 words |
+| sales-call-recap | 1.3.2 | 2 (run 2 of 3) | Fail | Auto: failed: Follow-up email is under 150 words |
+| sales-call-recap | 1.3.2 | 2 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 3 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 3 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 3 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 5 (run 1 of 3) | Pass | Auto: all checks pass (Case 2 failed 2 of 3 this run) |
+| sales-call-recap | 1.3.2 | 5 (run 2 of 3) | Pass | Auto: all checks pass (Case 2 failed 2 of 3 this run) |
+| sales-call-recap | 1.3.2 | 5 (run 3 of 3) | Pass | Auto: all checks pass (Case 2 failed 2 of 3 this run) |
+| sales-call-recap | 1.3.2 | 6 (run 1 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 6 (run 2 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.2 | 6 (run 3 of 3) | Pass | Auto: all checks pass |
+| sales-call-recap | 1.3.1 | 2 (run 1 of 3, re-checked) | Pass | Re-checked 2026-11-09 after fixing the word counter: 149 words. The original row counted bullet and quote marks as words |
+| sales-call-recap | 1.3.1 | 6 (run 2 of 3, re-checked) | Pass | Re-checked 2026-11-09 after fixing the word counter: 149 words. The original row counted bullet and quote marks as words |
+| sales-call-recap | 1.3.2 | 2 (run 1 of 3, re-checked) | Pass | Re-checked 2026-11-09 after fixing the word counter: 146 words. The original row counted bullet and quote marks as words |
+| sales-call-recap | 1.3.2 | 2 (run 2 of 3, re-checked) | Pass | Re-checked 2026-11-09 after fixing the word counter: 124 words. The original row counted bullet and quote marks as words |
+| client-status-report | 1.3.0 | 7 | Pass | Manual (Claude app): skill loaded on "turn these notes into this weeks report"; template followed; only "Left out of the report" and "Check before sending" after the report, under an "Internal: delete everything below before sending" divider |

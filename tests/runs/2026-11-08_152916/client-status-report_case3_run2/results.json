@@ -1,0 +1,37 @@
+{
+  "case": "client-status-report Case 3",
+  "run": 2,
+  "skill_loaded": "loaded via the Skill tool; repo copy confirmed",
+  "checks": [
+    {
+      "check": "Report has no ticket numbers",
+      "pass": true,
+      "evidence": "not found"
+    },
+    {
+      "check": "No reference to today's date",
+      "pass": true,
+      "evidence": "no reference to today's date"
+    }
+  ],
+  "checklist": [
+    {
+      "item": "No ticket numbers (HFD-412, HFD-440 and so on)",
+      "pass": true,
+      "evidence": "The client-facing report has no ticket numbers, e.g. the P1 is written as \"Net sales figures don't match Finance's month-end number\". They appear only in the separate \"Left out of the report\" notes for the sender."
+    },
+    {
+      "item": "No unexplained jargon: UAT, CDC, DAG, SCD2, RLS, dbt, P1, gold models, marts",
+      "pass": true,
+      "evidence": "The report body uses plain terms instead: \"User testing\", \"ongoing data feed\", \"keep a full change history\", \"each regional manager sees only their own region's data\", \"business-ready data sets\". The jargon appears only in the sender-only \"Left out\" list."
+    },
+    {
+      "item": "A client executive could understand every line without asking what it means (everyday project words like testing environment, data feed and sign-off count as plain)",
+      "pass": true,
+      "evidence": "Lines like \"7 of 11 data sets have passed quality checks\" and \"We found the cause of the sales records with no store attached: two older point-of-sale feeds\" are plain. The milestone names (\"Raw and cleaned data loaded\", \"Business-ready reporting data\") explain themselves."
+    }
+  ],
+  "result": "Pass",
+  "note": "Auto: all checks pass",
+  "cost_usd": 0.1637748
+}

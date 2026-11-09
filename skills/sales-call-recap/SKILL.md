@@ -62,6 +62,10 @@ Write "None" if there are none.
 - Keep each commitment as firm as it was said: "we can" stays "we can", and "we'd
   like to" stays "we'd like to". Don't turn a possibility into a promise, and don't
   add timing ("shortly", "this week") the rep didn't give.
+- Possibilities the rep raised ('we can…', 'we could…') aren't commitments. Leave
+  them out of the email unless they're an agreed next step.
+- Keep each commitment in the tense it was made. Don't describe a promised action
+  as done.
 - Work only from the input's own dates. Never refer to today's date or speculate
   about what has happened since.
 

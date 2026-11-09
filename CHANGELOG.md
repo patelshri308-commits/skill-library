@@ -2,7 +2,32 @@
 
 All skill changes, newest first, with the reason for each.
 
+## 2026-11-09
+- Test runner: the email word-count check counted bullet dashes and `>` quote marks as words
+  and missed a quoted subject line, so it failed four emails that were under 150 words.
+  It now counts only words with a letter or number. Every saved output was re-checked and
+  correction rows were added to `tests/RESULTS.md` (`tests/FIX_BACKLOG.md` G3). No skill changes.
+- sales-call-recap 1.3.2 re-run (`tests/runs/2026-11-09_131023/`): 15 of 15 after the fix.
+
 ## 2026-11-08
+- sales-call-recap 1.3.2: two email rule fixes from the 1.3.1 runs
+  (`tests/runs/2026-11-08_152105/` and `tests/runs/2026-11-08_120208/`,
+  `tests/FIX_BACKLOG.md` issues 4 and 10).
+  - Possibilities the rep raised ("we can…", "we could…") aren't commitments and stay out
+    of the email unless they're an agreed next step. Added right after the 1.3.1 "as firm
+    as it was said" rule, which caused this: Claude kept every "we can" from the call,
+    still hedged, and the email went over 150 words. Behind it: Case 2 run 1 (154 words)
+    and Case 6 run 2 (156) in `2026-11-08_152105`, and the Case 6 smoke run (161) in
+    `2026-11-08_120208`. Each ended with a "We can also…" paragraph.
+  - Each commitment stays in the tense it was made, and a promised action is never
+    described as done. Behind it: Case 3 run 1 in `2026-11-08_152105`, which wrote
+    "Renee, thanks for giving Priya a heads up" when she only said "I'll give Priya a
+    heads up."
+- Runner: a case marked "only if Case N passes" (sales-call-recap Case 5) now runs in
+  automated runs even when Case N failed, and the Note says so, e.g. "Auto: all checks
+  pass (Case 2 failed 1 of 3 this run)". The condition was meant for testing by hand. In
+  `2026-11-08_152105`, Case 2 passed 2 of 3, so all three Case 5 runs were skipped and
+  gave no data.
 - sales-call-recap 1.3.1: two rule fixes from the first automated run
   (`tests/runs/2026-11-08_105249/`, `tests/FIX_BACKLOG.md` issues 8 and 9).
   - The email keeps each commitment as firm as it was said ("we can" stays "we can"),
