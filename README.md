@@ -109,10 +109,30 @@ In the 2026-11-07 test round, all three skills compared their input to today's d
 
 Every org-approved skill has one named owner and is reviewed every 90 days. Skills unused for 60 days, or replaced, are retired.
 
+## Adoption
+
+A skill only saves time if people use it, so a pilot would be judged on these, reviewed weekly:
+
+| Measure | Why it matters | Where it comes from |
+| --- | --- | --- |
+| Active users per skill | Shows whether the team actually picked it up | Claude usage data for org skills |
+| Runs per skill per week | Low use triggers a check-in with the owner; 60 days unused means retire it | Same |
+| Minutes saved per run | Turns usage into time saved, using the baseline above | Baseline timings, re-measured each quarter |
+| Edits before sending | Heavy editing means the skill isn't doing its job | A short survey or spot checks |
+| Test pass rate on the current version | Proves a change didn't break anything | `tests/RESULTS.md` |
+| Open requests | Shows demand for new skills | `requests/` |
+
+Rollout would start with one team and one skill, `sales-call-recap`, with its owner running a short demo and collecting feedback for two weeks before going wider.
+
 ## Known limitations
 
 - All three skills are pilots. None has been approved for org-wide use.
-- Skills have only been tested on made-up sample data, with Claude grading most runs.
+- Skills have only been tested on made-up sample data. A Claude judge grades the checklist items code can't check, so every fail is reviewed by hand.
+- Grading can be wrong too. Testing found two checklist items the judge scored differently from run to run, and a bug in a code check that failed four emails that were under the word limit. All three were fixed (`tests/FIX_BACKLOG.md`, G1–G3).
+- Fixes can cause new problems. The sales-call-recap 1.3.1 rule that kept the rep's hedges also pushed emails toward the 150-word limit, so every change re-runs every case.
+- Trigger tests (does the skill load when it should, and not when it shouldn't) depend on the Claude app itself. The automated runner can't reproduce them, so they're run by hand.
+- Results vary between runs of the same case, which is why each case runs three times. A rare problem can still slip through: issue 5 ("anonymized" instead of "driver names removed") shows up in about 1 run in 5 and isn't checked yet.
+- Time savings were measured once per skill on short sample inputs, by someone who knew the samples well. Treat them as a floor until a full-length call is timed.
 - Skills work from pasted or uploaded text. No live connectors to Salesforce, Otter.ai or Microsoft 365 are set up.
 - The ladder is a written policy. Nothing yet stops someone editing a skill they don't own.
 - Usage isn't tracked, so the 60-day retirement rule can't be measured yet.
