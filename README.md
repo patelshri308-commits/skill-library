@@ -12,6 +12,7 @@ A small governed library of Claude skills for a fictional 40-person consultancy:
 - `requests/`: how a vague ask becomes a skill
 - `scripts/run_tests.py`: runs the test cases with Claude Code and grades them (see Running the tests)
 - `scripts/check_registry.py`: checks that every skill is registered, named, tested, documented and has the required rules
+- `snowflake/`: an optional add-on that copies the governance records into Snowflake (see Snowflake add-on)
 
 ## Try it
 
@@ -36,7 +37,7 @@ Treat these as a floor. The sample call is 6 minutes long, and the person timing
 
 ### Testing
 
-Every test run is logged in `tests/RESULTS.md`: 178 runs across all versions. Since 2026-11-08 the runs are automated with `scripts/run_tests.py`: three runs per case, checked by code where possible and by a Claude judge for the rest, with every fail reviewed by hand. Latest results on the current versions:
+Every test run is logged in `tests/RESULTS.md`: 179 runs across all versions. Since 2026-11-08 the runs are automated with `scripts/run_tests.py`: three runs per case, checked by code where possible and by a Claude judge for the rest, with every fail reviewed by hand. Latest results on the current versions:
 
 | Skill | Version | Passed | Run |
 | --- | --- | --- | --- |
@@ -73,6 +74,10 @@ Without `--log`, nothing is written to `tests/RESULTS.md`. Every run saves to `t
 4. **Judge.** A second `claude -p` call, with no skills and no tools, grades every checklist item and returns pass/fail with one line of evidence each. It's told to be strict and fail anything it's unsure about.
 5. **Result.** A case passes only if every check and every checklist item passes. A crash or timeout is logged as "Error", not "Fail". Logged notes start with "Auto:".
 6. **Conditions.** A condition in a test file, such as "only if Case 2 passes", is for testing by hand. Automated runs run the case anyway; if the condition wasn't met, the Note says so, for example "Auto: all checks pass (Case 2 failed 1 of 3 this run)".
+
+## Snowflake add-on
+
+`snowflake/` copies the registry, test log and skill requests into a Snowflake database. There, Snowflake roles enforce the permission ladder, and Cortex Analyst answers plain-English questions such as "What is the pass rate by skill and version?" The markdown files stay the source of truth, and a loader script reloads the copy. Setup, the role demo and example questions are in [snowflake/README.md](snowflake/README.md). Nothing in `skills/`, `tests/` or `scripts/` depends on it.
 
 ## Purpose
 
@@ -134,5 +139,5 @@ Rollout would start with one team and one skill, `sales-call-recap`, with its ow
 - Results vary between runs of the same case, which is why each case runs three times. A rare problem can still slip through: issue 5 ("anonymized" instead of "driver names removed") shows up in about 1 run in 5 and isn't checked yet.
 - Time savings were measured once per skill on short sample inputs, by someone who knew the samples well. Treat them as a floor until a full-length call is timed.
 - Skills work from pasted or uploaded text. No live connectors to Salesforce, Otter.ai or Microsoft 365 are set up.
-- The ladder is a written policy. Nothing yet stops someone editing a skill they don't own.
+- The ladder is enforced only on the Snowflake copy of the governance data, by roles and ownership-checking procedures (Standard Edition, so no row access policies). The skill files themselves still aren't protected: nothing stops someone editing a skill they don't own.
 - Usage isn't tracked, so the 60-day retirement rule can't be measured yet.

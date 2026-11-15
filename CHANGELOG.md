@@ -2,6 +2,25 @@
 
 All skill changes, newest first, with the reason for each.
 
+## 2026-11-15
+- Added the Snowflake add-on (`snowflake/`). It copies the registry, every `tests/RESULTS.md`
+  row and the skill requests into `SKILL_LIBRARY.GOVERNANCE`, enforces the permission
+  ladder with Snowflake roles, and adds a semantic view for Cortex Analyst with five
+  verified questions. Behind it: the ladder was a written policy only (Known limitations),
+  and test history could only be read as a markdown table. No skill, test or runner changes.
+  - Ownership is enforced by procedures that check `SKILL_OWNERSHIP`, not a row access
+    policy. The trial account is Standard Edition, and row access policies need Enterprise.
+    They also never filter INSERT, so adding test results needed a procedure anyway.
+  - The loader logs in with `username_password_mfa` by default. Browser login
+    (`externalbrowser`) needs an SSO identity provider, which the account doesn't have,
+    and a passkey can't be used by scripts.
+  - Corrected rows count once: the 4 original fails that the 2026-11-09 re-checks overturned
+    are flagged `IS_SUPERSEDED` and left out of pass and fail counts, and re-check rows
+    aren't counted as runs.
+- README: test log count 178 → 179. The 178 was counted before client-status-report Case 7
+  was logged. Known limitations now say the ladder is enforced only on the Snowflake copy of
+  the governance data, not on the skill files.
+
 ## 2026-11-09
 - Test runner: the email word-count check counted bullet dashes and `>` quote marks as words
   and missed a quoted subject line, so it failed four emails that were under 150 words.
