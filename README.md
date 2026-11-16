@@ -77,7 +77,7 @@ Without `--log`, nothing is written to `tests/RESULTS.md`. Every run saves to `t
 
 ## Snowflake add-on
 
-`snowflake/` copies the registry, test log and skill requests into a Snowflake database. There, Snowflake roles enforce the permission ladder, and Cortex Analyst answers plain-English questions such as "What is the pass rate by skill and version?" The markdown files stay the source of truth, and a loader script reloads the copy. Setup, the role demo and example questions are in [snowflake/README.md](snowflake/README.md). Nothing in `skills/`, `tests/` or `scripts/` depends on it.
+`snowflake/` copies the registry, test log and skill requests into a Snowflake database. There, Snowflake roles enforce the permission ladder, and a Cortex Agent (`SKILL_LIBRARY.GOVERNANCE.SKILLGOVERNANCEASSISTANT`) uses Cortex Analyst to answer plain-English questions such as "What is the pass rate by skill and version?" It is read-only, and its instructions keep its answers to what the data shows. The markdown files stay the source of truth, and a loader script reloads the copy. Setup, the role demo and example questions are in [snowflake/README.md](snowflake/README.md). Nothing in `skills/`, `tests/` or `scripts/` depends on it.
 
 ## Purpose
 
@@ -141,3 +141,14 @@ Rollout would start with one team and one skill, `sales-call-recap`, with its ow
 - Skills work from pasted or uploaded text. No live connectors to Salesforce, Otter.ai or Microsoft 365 are set up.
 - The ladder is enforced only on the Snowflake copy of the governance data, by roles and ownership-checking procedures (Standard Edition, so no row access policies). The skill files themselves still aren't protected: nothing stops someone editing a skill they don't own.
 - Usage isn't tracked, so the 60-day retirement rule can't be measured yet.
+
+## What's next
+
+In order of value:
+
+1. **Otter.ai connector.** Transcripts arrive automatically instead of being pasted in. The sales skill's trigger tests would be re-run, since its input changes.
+2. **Salesforce connector.** The skill drafts straight into the opportunity, and the rep approves before anything is saved. Skills still never write on their own.
+3. **Lock down the skill files.** Enforce the ladder on the skills themselves through Claude's org-managed skills (members can't edit them) and pull-request review in this repo, matching what Snowflake already enforces for the records.
+4. **Automatic sync to Snowflake.** Reload the governance copy on every commit instead of by hand, so the agent's answers are always current.
+5. **Add the governance agent to Snowflake CoWork,** so people can ask about the library where they already work.
+6. **Track usage,** so the adoption measures and the 60-day retirement rule can be measured instead of estimated.
